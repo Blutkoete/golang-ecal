@@ -1,6 +1,7 @@
 # golang-ecal
 A [high-level interface](https://github.com/Blutkoete/golang-ecal/tree/master/ecal) from [GO](https://golang.org/) to [eCAL](https://github.com/continental/ecal) based on a [low-level interface](https://github.com/Blutkoete/golang-ecal/tree/master/ecalc) generated via [SWIG](http://swig.org/).
 
+
 ## Status
 This is the initial proof-of-concept version providing an abstraction of the SWIG-generated low-level interface for initialization, publishers and subscribers.
 
@@ -20,7 +21,7 @@ Sending:
         "log"
         "os"
     
-        "github.com/Blutkoete/ecal"
+        "github.com/Blutkoete/golang-ecal/ecal"
     )
     
     func main() {
@@ -59,7 +60,7 @@ Receiving:
         "os"
         "time"
     
-        "github.com/Blutkoete/ecal"
+        "github.com/Blutkoete/golang-ecal/ecal"
     )
     
     func main() {
