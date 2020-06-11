@@ -62,7 +62,6 @@ type publisher struct {
 }
 
 func (pub publisher) Start() error {
-	log.Println("Start() waiting for lock ...")
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -75,7 +74,6 @@ func (pub publisher) Start() error {
 		for !pub.destroyed && pub.running {
 			message := <-pub.inputSource
 
-			log.Println("goroutine waiting for lock ...")
 			pub.mutex.Lock()
 			if !pub.destroyed && pub.running {
 				pub.mutex.Unlock()
@@ -89,7 +87,6 @@ func (pub publisher) Start() error {
 }
 
 func (pub publisher) Stop() error {
-	log.Println("Stop() waiting for lock ...")
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -106,7 +103,6 @@ func (pub publisher) Destroy() error {
 		pub.Stop()
 	}
 
-	log.Println("Destroy() waiting for lock ...")
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -120,6 +116,9 @@ func (pub publisher) Destroy() error {
 }
 
 func (pub publisher) IsStopped() bool {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
 	return !pub.running
 }
 
@@ -133,6 +132,10 @@ func (pub publisher) IsDestroyed() bool {
 func (pub publisher) IsSubscribed() bool {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return false
+	}
 
 	return ecalc.ECAL_Pub_IsSubscribed(pub.handle) != 0
 }
@@ -178,6 +181,13 @@ func (pub publisher) GetID() int64 {
 }
 
 func (pub publisher) SetDescription(topicDesc string) error {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return errors.New("publisher already destroyed")
+	}
+
 	rc := ecalc.ECAL_Pub_SetDescription(pub.handle, topicDesc, len(topicDesc))
 	if rc == 0 {
 		return errors.New("setting description failed")
@@ -187,23 +197,51 @@ func (pub publisher) SetDescription(topicDesc string) error {
 }
 
 func (pub publisher) SetQoS() error {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return errors.New("publisher already destroyed")
+	}
+
 	return errors.New("not implemented")
 }
 
 func (pub publisher) SetLayerMode() error {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return errors.New("publisher already destroyed")
+	}
+
 	return errors.New("not implemented")
 }
 
 func (pub publisher) SetMaxBandwidthUDP(bandwidth int64) error {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return errors.New("publisher already destroyed")
+	}
+
 	rc := ecalc.ECAL_Pub_SetMaxBandwidthUDP(pub.handle, bandwidth)
 	if rc == 0 {
-		return errors.New("setting maximum UDP bandwith failed")
+		return errors.New("setting maximum UDP bandwidth failed")
 	}
 	pub.maxBandwidthUDP = bandwidth
 	return nil
 }
 
 func (pub publisher) SetID(id int64) error {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return errors.New("publisher already destroyed")
+	}
+
 	rc := ecalc.ECAL_Pub_SetID(pub.handle, id)
 	if rc == 0 {
 		return errors.New("setting ID failed")
@@ -213,14 +251,35 @@ func (pub publisher) SetID(id int64) error {
 }
 
 func (pub publisher) ShareType(state int) error {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return errors.New("publisher already destroyed")
+	}
+
 	return errors.New("not implemented")
 }
 
 func (pub publisher) ShareDescription(state int) error {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return errors.New("publisher already destroyed")
+	}
+
 	return errors.New("not implemented")
 }
 
 func (pub publisher) Dump() ([]byte, error) {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return nil, errors.New("publisher already destroyed")
+	}
+
 	const bufferSize = 4096
 	cBuffer := C.malloc(bufferSize)
 	defer C.free(cBuffer)
@@ -237,7 +296,6 @@ func (pub publisher) Dump() ([]byte, error) {
 }
 
 func (pub publisher) send(message Message) error {
-	log.Println("Send() waiting for lock ...")
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -255,7 +313,6 @@ func (pub publisher) send(message Message) error {
 		return errors.New("error sending")
 	}
 
-	log.Println("success sending", bytesSent, "bytes")
 	return nil
 }
 
