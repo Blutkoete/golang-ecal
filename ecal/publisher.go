@@ -36,7 +36,7 @@ type PublisherIf interface {
 	SetDescription(topicDesc string) error
 	SetQoS() error
 	SetLayerMode() error
-	SetMaxBandwithUDP(bandwith int64) error
+	SetMaxBandwidthUDP(bandwidth int64) error
 	SetID(id int64) error
 
 	ShareType(state int) error
@@ -48,17 +48,17 @@ type PublisherIf interface {
 }
 
 type publisher struct {
-	handle         uintptr
-	running        bool
-	destroyed      bool
-	inputSource    chan Message
-	eventSink      chan bool
-	topicName      string
-	topicType      string
-	topicDesc      string
-	maxBandwithUDP int64
-	id             int64
-	mutex          *sync.Mutex
+	handle          uintptr
+	running         bool
+	destroyed       bool
+	inputSource     chan Message
+	eventSink       chan bool
+	topicName       string
+	topicType       string
+	topicDesc       string
+	maxBandwidthUDP int64
+	id              int64
+	mutex           *sync.Mutex
 }
 
 func (pub publisher) Start() error {
@@ -170,7 +170,7 @@ func (pub publisher) GetLayerMode() error {
 }
 
 func (pub publisher) GetMaxBandwithUDP() int64 {
-	return pub.maxBandwithUDP
+	return pub.maxBandwidthUDP
 }
 
 func (pub publisher) GetID() int64 {
@@ -194,12 +194,12 @@ func (pub publisher) SetLayerMode() error {
 	return errors.New("not implemented")
 }
 
-func (pub publisher) SetMaxBandwithUDP(bandwith int64) error {
-	rc := ecalc.ECAL_Pub_SetMaxBandwidthUDP(pub.handle, bandwith)
+func (pub publisher) SetMaxBandwidthUDP(bandwidth int64) error {
+	rc := ecalc.ECAL_Pub_SetMaxBandwidthUDP(pub.handle, bandwidth)
 	if rc == 0 {
 		return errors.New("setting maximum UDP bandwith failed")
 	}
-	pub.maxBandwithUDP = bandwith
+	pub.maxBandwidthUDP = bandwidth
 	return nil
 }
 
@@ -271,16 +271,16 @@ func PublisherCreate(topicName string, topicType string, topicDesc string, start
 	}
 
 	pub := publisher{handle: handle,
-		running:        false,
-		destroyed:      false,
-		inputSource:    make(chan Message),
-		eventSink:      make(chan bool),
-		topicName:      topicName,
-		topicType:      topicType,
-		topicDesc:      topicDesc,
-		maxBandwithUDP: -1,
-		id:             -1,
-		mutex:          &sync.Mutex{}}
+		running:         false,
+		destroyed:       false,
+		inputSource:     make(chan Message),
+		eventSink:       make(chan bool),
+		topicName:       topicName,
+		topicType:       topicType,
+		topicDesc:       topicDesc,
+		maxBandwidthUDP: -1,
+		id:              -1,
+		mutex:           &sync.Mutex{}}
 	if start {
 		err := pub.Start()
 		if err != nil {
