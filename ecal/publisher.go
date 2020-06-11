@@ -42,6 +42,8 @@ type PublisherIf interface {
 	ShareType(state int) error
 	ShareDescription(state int) error
 
+	Dump() ([]byte, error)
+
 	send(message Message) error
 }
 
@@ -216,6 +218,22 @@ func (pub publisher) ShareType(state int) error {
 
 func (pub publisher) ShareDescription(state int) error {
 	return errors.New("not implemented")
+}
+
+func (pub publisher) Dump() ([]byte, error) {
+	const bufferSize = 4096
+	cBuffer := C.malloc(bufferSize)
+	defer C.free(cBuffer)
+
+	bytesInDump := ecalc.ECAL_Pub_Dump(pub.handle, (uintptr)(cBuffer), bufferSize)
+	if bytesInDump <= 0 {
+		return nil, errors.New("dump failed")
+	}
+
+	dump := make([]byte, bytesInDump, bytesInDump)
+	gBuffer := (*[1 << 30]byte)(cBuffer)
+	copy(dump, gBuffer[:bytesInDump])
+	return dump, nil
 }
 
 func (pub publisher) send(message Message) error {
