@@ -2,7 +2,7 @@ package ecal
 
 /*
 #include <stdlib.h>
- */
+*/
 import "C"
 import (
 	"errors"
@@ -14,36 +14,49 @@ import (
 )
 
 type PublisherIf interface {
-	GetHandle() uintptr
-
 	Start() error
 	Stop() error
-	Stopped() bool
-
 	Destroy() error
-	Destroyed() bool
+
+	IsStopped() bool
+	IsDestroyed() bool
+	IsSubscribed() bool
+
+	GetHandle() uintptr
+	GetInputChannel() chan<- Message
+	GetEventChannel() <-chan bool
+	GetTopic() string
+	GetType() string
+	GetDescription() string
+	GetQoS() error
+	GetLayerMode() error
+	GetMaxBandwithUDP() int64
+	GetID() int64
+
+	SetDescription(topicDesc string) error
+	SetQoS() error
+	SetLayerMode() error
+	SetMaxBandwithUDP(bandwith int64) error
+	SetID(id int64) error
+
+	ShareType(state int) error
+	ShareDescription(state int) error
 
 	send(message Message) error
-
-	GetChannel() chan<- Message
-	GetTopic() string
-	GetTopicType() string
-	GetTopicDesc() string
 }
 
 type publisher struct {
-	handle uintptr
-	running bool
-	destroyed bool
-	input chan Message
-	topicName string
-	topicType string
-	topicDesc string
-	mutex *sync.Mutex
-}
-
-func (pub publisher) GetHandle() uintptr {
-	return pub.handle
+	handle         uintptr
+	running        bool
+	destroyed      bool
+	inputSource    chan Message
+	eventSink      chan bool
+	topicName      string
+	topicType      string
+	topicDesc      string
+	maxBandwithUDP int64
+	id             int64
+	mutex          *sync.Mutex
 }
 
 func (pub publisher) Start() error {
@@ -58,7 +71,7 @@ func (pub publisher) Start() error {
 
 	go func(pub publisher) {
 		for !pub.destroyed && pub.running {
-			message := <-pub.input
+			message := <-pub.inputSource
 
 			log.Println("goroutine waiting for lock ...")
 			pub.mutex.Lock()
@@ -86,10 +99,6 @@ func (pub publisher) Stop() error {
 	return nil
 }
 
-func (pub publisher) Stopped() bool {
-	return !pub.running
-}
-
 func (pub publisher) Destroy() error {
 	if pub.running {
 		pub.Stop()
@@ -108,11 +117,105 @@ func (pub publisher) Destroy() error {
 	return nil
 }
 
-func (pub publisher) Destroyed() bool {
+func (pub publisher) IsStopped() bool {
+	return !pub.running
+}
+
+func (pub publisher) IsDestroyed() bool {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
 	return pub.destroyed
+}
+
+func (pub publisher) IsSubscribed() bool {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	return ecalc.ECAL_Pub_IsSubscribed(pub.handle) != 0
+}
+
+func (pub publisher) GetHandle() uintptr {
+	return pub.handle
+}
+
+func (pub publisher) GetInputChannel() chan<- Message {
+	return pub.inputSource
+}
+
+func (pub publisher) GetEventChannel() <-chan bool {
+	return pub.eventSink
+}
+
+func (pub publisher) GetTopic() string {
+	return pub.topicName
+}
+
+func (pub publisher) GetType() string {
+	return pub.topicType
+}
+
+func (pub publisher) GetDescription() string {
+	return pub.topicDesc
+}
+
+func (pub publisher) GetQoS() error {
+	return errors.New("not implemented")
+}
+
+func (pub publisher) GetLayerMode() error {
+	return errors.New("not implemented")
+}
+
+func (pub publisher) GetMaxBandwithUDP() int64 {
+	return pub.maxBandwithUDP
+}
+
+func (pub publisher) GetID() int64 {
+	return pub.id
+}
+
+func (pub publisher) SetDescription(topicDesc string) error {
+	rc := ecalc.ECAL_Pub_SetDescription(pub.handle, topicDesc, len(topicDesc))
+	if rc == 0 {
+		return errors.New("setting description failed")
+	}
+	pub.topicDesc = topicDesc
+	return nil
+}
+
+func (pub publisher) SetQoS() error {
+	return errors.New("not implemented")
+}
+
+func (pub publisher) SetLayerMode() error {
+	return errors.New("not implemented")
+}
+
+func (pub publisher) SetMaxBandwithUDP(bandwith int64) error {
+	rc := ecalc.ECAL_Pub_SetMaxBandwidthUDP(pub.handle, bandwith)
+	if rc == 0 {
+		return errors.New("setting maximum UDP bandwith failed")
+	}
+	pub.maxBandwithUDP = bandwith
+	return nil
+}
+
+func (pub publisher) SetID(id int64) error {
+	rc := ecalc.ECAL_Pub_SetID(pub.handle, id)
+	if rc == 0 {
+		return errors.New("setting ID failed")
+	}
+	pub.id = id
+	return nil
+}
+
+func (pub publisher) ShareType(state int) error {
+	return errors.New("not implemented")
+}
+
+func (pub publisher) ShareDescription(state int) error {
+	return errors.New("not implemented")
 }
 
 func (pub publisher) send(message Message) error {
@@ -138,22 +241,6 @@ func (pub publisher) send(message Message) error {
 	return nil
 }
 
-func (pub publisher) GetChannel() chan<- Message {
-	return pub.input
-}
-
-func (pub publisher) GetTopic() string {
-	return pub.topicName
-}
-
-func (pub publisher) GetTopicType() string {
-	return pub.topicType
-}
-
-func (pub publisher) GetTopicDesc() string {
-	return pub.topicDesc
-}
-
 func PublisherCreate(topicName string, topicType string, topicDesc string, start bool) (PublisherIf, error) {
 	handle := ecalc.ECAL_Pub_New()
 	if handle == 0 {
@@ -165,14 +252,17 @@ func PublisherCreate(topicName string, topicType string, topicDesc string, start
 		return nil, errors.New("could not create new publisher")
 	}
 
-	pub := publisher { handle:    handle,
-		               running:   false,
-		               destroyed: false,
-		               input:     make(chan Message),
-		               topicName: topicName,
-		               topicType: topicType,
-		               topicDesc: topicDesc,
-		               mutex:     &sync.Mutex{} }
+	pub := publisher{handle: handle,
+		running:        false,
+		destroyed:      false,
+		inputSource:    make(chan Message),
+		eventSink:      make(chan bool),
+		topicName:      topicName,
+		topicType:      topicType,
+		topicDesc:      topicDesc,
+		maxBandwithUDP: -1,
+		id:             -1,
+		mutex:          &sync.Mutex{}}
 	if start {
 		err := pub.Start()
 		if err != nil {
