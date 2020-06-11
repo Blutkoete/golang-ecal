@@ -30,15 +30,15 @@ type SubscriberIf interface {
 }
 
 type subscriber struct {
-	handle uintptr
+	handle     uintptr
 	bufferSize int
-	running bool
-	destroyed bool
-	output chan Message
-	topicName string
-	topicType string
-	topicDesc string
-	mutex *sync.Mutex
+	running    bool
+	destroyed  bool
+	output     chan Message
+	topicName  string
+	topicType  string
+	topicDesc  string
+	mutex      *sync.Mutex
 }
 
 func (sub subscriber) GetHandle() uintptr {
@@ -64,9 +64,9 @@ func (sub subscriber) Start() error {
 		defer C.free(cBuffer)
 
 		for !sub.destroyed && sub.running {
-			message := Message { Content: nil,
-				                 Timestamp: 0 }
-			bytesReceived := ecalc.ECAL_Sub_Receive(sub.handle, (uintptr)(cBuffer), sub.bufferSize, &message.Timestamp, 100)
+			message := Message{Content: nil,
+				Timestamp: 0}
+			bytesReceived := ecalc.ECAL_Sub_Receive(sub.handle, uintptr(cBuffer), sub.bufferSize, &message.Timestamp, 100)
 			if bytesReceived <= 0 {
 				continue
 			} else if bytesReceived > sub.bufferSize {
@@ -159,15 +159,15 @@ func SubscriberCreate(topicName string, topicType string, topicDesc string, star
 		return nil, errors.New("could not create new subscriber")
 	}
 
-	sub := subscriber { handle:    handle,
+	sub := subscriber{handle: handle,
 		bufferSize: bufferSize,
-		running:   false,
-		destroyed: false,
+		running:    false,
+		destroyed:  false,
 		output:     make(chan Message),
-		topicName: topicName,
-		topicType: topicType,
-		topicDesc: topicDesc,
-		mutex:     &sync.Mutex{} }
+		topicName:  topicName,
+		topicType:  topicType,
+		topicDesc:  topicDesc,
+		mutex:      &sync.Mutex{}}
 	if start {
 		err := sub.Start()
 		if err != nil {

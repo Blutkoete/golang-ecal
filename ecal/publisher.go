@@ -28,14 +28,14 @@ type PublisherIf interface {
 	GetTopic() string
 	GetType() string
 	GetDescription() string
-	GetQoS() error
-	GetLayerMode() error
+	GetQoS() (WriterQOS, error)
+	GetLayerMode() (int, int)
 	GetMaxBandwidthUDP() int64
 	GetID() int64
 
 	SetDescription(topicDesc string) error
-	SetQoS() error
-	SetLayerMode() error
+	SetQoS(qos WriterQOS) error
+	SetLayerMode(layerMode int, sendMode int) error
 	SetMaxBandwidthUDP(bandwidth int64) error
 	SetID(id int64) error
 
@@ -56,6 +56,8 @@ type publisher struct {
 	topicName       string
 	topicType       string
 	topicDesc       string
+	layerMode       int
+	sendMode        int
 	maxBandwidthUDP int64
 	id              int64
 	mutex           *sync.Mutex
@@ -149,6 +151,7 @@ func (pub publisher) GetInputChannel() chan<- Message {
 }
 
 func (pub publisher) GetEventChannel() <-chan bool {
+	log.Println("events not supported")
 	return pub.eventSink
 }
 
@@ -164,12 +167,25 @@ func (pub publisher) GetDescription() string {
 	return pub.topicDesc
 }
 
-func (pub publisher) GetQoS() error {
-	return errors.New("not implemented")
+func (pub publisher) GetQoS() (WriterQOS, error) {
+	pub.mutex.Lock()
+	defer pub.mutex.Unlock()
+
+	if pub.destroyed {
+		return WriterQOS{BestEffortReliability, KeepLastHistoryQOS}, errors.New("publisher already destroyed")
+	}
+
+	var cQOS ecalc.SWriterQOSC
+	rc := ecalc.ECAL_Pub_GetQOS(pub.handle, cQOS)
+	if rc == 0 {
+		return WriterQOS{BestEffortReliability, KeepLastHistoryQOS}, errors.New("getting QOS failed")
+	}
+
+	return WriterQOS{(int)(cQOS.GetReliability()), (int)(cQOS.GetHistory_kind())}, nil
 }
 
-func (pub publisher) GetLayerMode() error {
-	return errors.New("not implemented")
+func (pub publisher) GetLayerMode() (int, int) {
+	return pub.layerMode, pub.sendMode
 }
 
 func (pub publisher) GetMaxBandwidthUDP() int64 {
@@ -196,7 +212,7 @@ func (pub publisher) SetDescription(topicDesc string) error {
 	return nil
 }
 
-func (pub publisher) SetQoS() error {
+func (pub publisher) SetQoS(qos WriterQOS) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -204,10 +220,18 @@ func (pub publisher) SetQoS() error {
 		return errors.New("publisher already destroyed")
 	}
 
-	return errors.New("not implemented")
+	var cQOS ecalc.SWriterQOSC
+	cQOS.SetReliability((ecalc.Enum_SS_eQOSPolicy_ReliabilityC)(qos.Reliability))
+	cQOS.SetHistory_kind((ecalc.Enum_SS_eQOSPolicy_HistoryKindC)(qos.HistoryKind))
+	rc := ecalc.ECAL_Pub_GetQOS(pub.handle, cQOS)
+	if rc == 0 {
+		errors.New("setting QOS failed")
+	}
+
+	return nil
 }
 
-func (pub publisher) SetLayerMode() error {
+func (pub publisher) SetLayerMode(layerMode int, sendMode int) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -215,7 +239,14 @@ func (pub publisher) SetLayerMode() error {
 		return errors.New("publisher already destroyed")
 	}
 
-	return errors.New("not implemented")
+	rc := ecalc.ECAL_Pub_SetLayerMode(pub.handle, ecalc.Enum_SS_eTransportLayerC(layerMode), ecalc.Enum_SS_eSendModeC(sendMode))
+	if rc == 0 {
+		errors.New("setting layer mode failed")
+	}
+
+	pub.layerMode = layerMode
+	pub.sendMode = sendMode
+	return nil
 }
 
 func (pub publisher) SetMaxBandwidthUDP(bandwidth int64) error {
@@ -307,7 +338,7 @@ func (pub publisher) send(message Message) error {
 		return errors.New("publisher stopped")
 	}
 
-	bytesSent := ecalc.ECAL_Pub_Send(pub.handle, (uintptr)(unsafe.Pointer(&message.Content[0])), len(message.Content), message.Timestamp)
+	bytesSent := ecalc.ECAL_Pub_Send(pub.handle, uintptr(unsafe.Pointer(&message.Content[0])), len(message.Content), message.Timestamp)
 	if bytesSent < len(message.Content) {
 		log.Println("error sending")
 		return errors.New("error sending")
@@ -335,6 +366,8 @@ func PublisherCreate(topicName string, topicType string, topicDesc string, start
 		topicName:       topicName,
 		topicType:       topicType,
 		topicDesc:       topicDesc,
+		layerMode:       TLayerAll,
+		sendMode:        SModeAuto,
 		maxBandwidthUDP: -1,
 		id:              -1,
 		mutex:           &sync.Mutex{}}
