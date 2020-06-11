@@ -7,7 +7,7 @@ This is the initial proof-of-concept version providing an abstraction of the SWI
 
 *[ecal](https://github.com/Blutkoete/golang-ecal/tree/master/ecal)*: This is the high-level interface. It allows initialization, data publishing and reception.
 
-*[ecalc](https://github.com/Blutkoete/golang-ecal/tree/master/ecal)*: This is the pure SWIG-generated low-level interface.
+*[ecalc](https://github.com/Blutkoete/golang-ecal/tree/master/ecalc)*: This is the pure SWIG-generated low-level interface.
 
 As the full low-level interface is accessible, you can do whatever the eCAL C interface allows you to do. More GO-like approaches like channels are only available via the high-level interface and thus are currently limited to publishers and subscribers. The publisher and subscriber interface is also not complete, but as you can retrieve the handle from a high-level publisher, you could use the low-level interface to set whatever other settings you want.
 
@@ -34,7 +34,7 @@ Sending:
         log.Println("Initialized successfully.")
     
         var publisher ecal.PublisherIf
-        publisher, err = ecal.PublisherCreate("foo", "base:std::string", "", true)
+        publisher, err = ecal.PublisherCreate("Hello", "base:std::string", "", true)
         if err != nil {
             log.Fatal(err)
         }
