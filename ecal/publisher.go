@@ -30,7 +30,7 @@ type PublisherIf interface {
 	GetDescription() string
 	GetQoS() error
 	GetLayerMode() error
-	GetMaxBandwithUDP() int64
+	GetMaxBandwidthUDP() int64
 	GetID() int64
 
 	SetDescription(topicDesc string) error
@@ -169,7 +169,7 @@ func (pub publisher) GetLayerMode() error {
 	return errors.New("not implemented")
 }
 
-func (pub publisher) GetMaxBandwithUDP() int64 {
+func (pub publisher) GetMaxBandwidthUDP() int64 {
 	return pub.maxBandwidthUDP
 }
 
