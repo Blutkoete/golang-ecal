@@ -10,7 +10,7 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/Blutkoete/golang-ecal/ecalc"
+	"golang-ecal/ecalc"
 )
 
 type PublisherIf interface {
@@ -63,7 +63,7 @@ type publisher struct {
 	mutex           *sync.Mutex
 }
 
-func (pub publisher) Start() error {
+func (pub *publisher) Start() error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -72,7 +72,7 @@ func (pub publisher) Start() error {
 	}
 	pub.running = true
 
-	go func(pub publisher) {
+	go func(pub *publisher) {
 		for !pub.destroyed && pub.running {
 			message := <-pub.inputSource
 
@@ -85,10 +85,11 @@ func (pub publisher) Start() error {
 			}
 		}
 	}(pub)
+
 	return nil
 }
 
-func (pub publisher) Stop() error {
+func (pub *publisher) Stop() error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -100,7 +101,7 @@ func (pub publisher) Stop() error {
 	return nil
 }
 
-func (pub publisher) Destroy() error {
+func (pub *publisher) Destroy() error {
 	if pub.running {
 		pub.Stop()
 	}
@@ -117,21 +118,21 @@ func (pub publisher) Destroy() error {
 	return nil
 }
 
-func (pub publisher) IsStopped() bool {
+func (pub *publisher) IsStopped() bool {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
 	return !pub.running
 }
 
-func (pub publisher) IsDestroyed() bool {
+func (pub *publisher) IsDestroyed() bool {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
 	return pub.destroyed
 }
 
-func (pub publisher) IsSubscribed() bool {
+func (pub *publisher) IsSubscribed() bool {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -142,32 +143,32 @@ func (pub publisher) IsSubscribed() bool {
 	return ecalc.ECAL_Pub_IsSubscribed(pub.handle) != 0
 }
 
-func (pub publisher) GetHandle() uintptr {
+func (pub *publisher) GetHandle() uintptr {
 	return pub.handle
 }
 
-func (pub publisher) GetInputChannel() chan<- Message {
+func (pub *publisher) GetInputChannel() chan<- Message {
 	return pub.inputSource
 }
 
-func (pub publisher) GetEventChannel() <-chan bool {
+func (pub *publisher) GetEventChannel() <-chan bool {
 	log.Println("events not supported")
 	return pub.eventSink
 }
 
-func (pub publisher) GetTopic() string {
+func (pub *publisher) GetTopic() string {
 	return pub.topicName
 }
 
-func (pub publisher) GetType() string {
+func (pub *publisher) GetType() string {
 	return pub.topicType
 }
 
-func (pub publisher) GetDescription() string {
+func (pub *publisher) GetDescription() string {
 	return pub.topicDesc
 }
 
-func (pub publisher) GetQoS() (WriterQOS, error) {
+func (pub *publisher) GetQoS() (WriterQOS, error) {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -184,19 +185,19 @@ func (pub publisher) GetQoS() (WriterQOS, error) {
 	return WriterQOS{(int)(cQOS.GetReliability()), (int)(cQOS.GetHistory_kind())}, nil
 }
 
-func (pub publisher) GetLayerMode() (int, int) {
+func (pub *publisher) GetLayerMode() (int, int) {
 	return pub.layerMode, pub.sendMode
 }
 
-func (pub publisher) GetMaxBandwidthUDP() int64 {
+func (pub *publisher) GetMaxBandwidthUDP() int64 {
 	return pub.maxBandwidthUDP
 }
 
-func (pub publisher) GetID() int64 {
+func (pub *publisher) GetID() int64 {
 	return pub.id
 }
 
-func (pub publisher) SetDescription(topicDesc string) error {
+func (pub *publisher) SetDescription(topicDesc string) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -212,7 +213,7 @@ func (pub publisher) SetDescription(topicDesc string) error {
 	return nil
 }
 
-func (pub publisher) SetQoS(qos WriterQOS) error {
+func (pub *publisher) SetQoS(qos WriterQOS) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -225,13 +226,13 @@ func (pub publisher) SetQoS(qos WriterQOS) error {
 	cQOS.SetHistory_kind((ecalc.Enum_SS_eQOSPolicy_HistoryKindC)(qos.HistoryKind))
 	rc := ecalc.ECAL_Pub_GetQOS(pub.handle, cQOS)
 	if rc == 0 {
-		errors.New("setting QOS failed")
+		return errors.New("setting QOS failed")
 	}
 
 	return nil
 }
 
-func (pub publisher) SetLayerMode(layerMode int, sendMode int) error {
+func (pub *publisher) SetLayerMode(layerMode int, sendMode int) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -241,7 +242,7 @@ func (pub publisher) SetLayerMode(layerMode int, sendMode int) error {
 
 	rc := ecalc.ECAL_Pub_SetLayerMode(pub.handle, ecalc.Enum_SS_eTransportLayerC(layerMode), ecalc.Enum_SS_eSendModeC(sendMode))
 	if rc == 0 {
-		errors.New("setting layer mode failed")
+		return errors.New("setting layer mode failed")
 	}
 
 	pub.layerMode = layerMode
@@ -249,7 +250,7 @@ func (pub publisher) SetLayerMode(layerMode int, sendMode int) error {
 	return nil
 }
 
-func (pub publisher) SetMaxBandwidthUDP(bandwidth int64) error {
+func (pub *publisher) SetMaxBandwidthUDP(bandwidth int64) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -265,7 +266,7 @@ func (pub publisher) SetMaxBandwidthUDP(bandwidth int64) error {
 	return nil
 }
 
-func (pub publisher) SetID(id int64) error {
+func (pub *publisher) SetID(id int64) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -281,7 +282,7 @@ func (pub publisher) SetID(id int64) error {
 	return nil
 }
 
-func (pub publisher) ShareType(state int) error {
+func (pub *publisher) ShareType(state int) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -292,7 +293,7 @@ func (pub publisher) ShareType(state int) error {
 	return errors.New("not implemented")
 }
 
-func (pub publisher) ShareDescription(state int) error {
+func (pub *publisher) ShareDescription(state int) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -303,7 +304,7 @@ func (pub publisher) ShareDescription(state int) error {
 	return errors.New("not implemented")
 }
 
-func (pub publisher) Dump() ([]byte, error) {
+func (pub *publisher) Dump() ([]byte, error) {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -326,7 +327,7 @@ func (pub publisher) Dump() ([]byte, error) {
 	return dump, nil
 }
 
-func (pub publisher) send(message Message) error {
+func (pub *publisher) send(message Message) error {
 	pub.mutex.Lock()
 	defer pub.mutex.Unlock()
 
@@ -338,9 +339,13 @@ func (pub publisher) send(message Message) error {
 		return errors.New("publisher stopped")
 	}
 
+	if message.Content == nil || len(message.Content) == 0 {
+		return errors.New("no data to send")
+	}
+
 	bytesSent := ecalc.ECAL_Pub_Send(pub.handle, uintptr(unsafe.Pointer(&message.Content[0])), len(message.Content), message.Timestamp)
 	if bytesSent < len(message.Content) {
-		log.Println("error sending")
+		log.Println("error sending", bytesSent, len(message.Content))
 		return errors.New("error sending")
 	}
 
@@ -378,5 +383,5 @@ func PublisherCreate(topicName string, topicType string, topicDesc string, start
 		}
 	}
 
-	return pub, nil
+	return &pub, nil
 }

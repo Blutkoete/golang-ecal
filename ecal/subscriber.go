@@ -9,7 +9,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/Blutkoete/golang-ecal/ecalc"
+	"golang-ecal/ecalc"
 )
 
 type SubscriberIf interface {

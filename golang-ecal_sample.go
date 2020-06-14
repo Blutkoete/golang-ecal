@@ -26,23 +26,23 @@ func main() {
 	<-time.After(time.Second)
 
 	pubChannel := pub.GetInputChannel()
-	go func(channel chan<- ecal.Message) {
-		message := ecal.Message { Content: []byte("HELLO WORLD FROM GO"),
-			                      Timestamp: -1 }
+	go func(ch chan<- ecal.Message) {
+		message := ecal.Message{Content: []byte("HELLO WORLD FROM GO"),
+			Timestamp: -1}
 		for ecal.Ok() {
 			select {
-			case channel <- message:
-			case <- time.After(time.Second):
+			case ch <- message:
+			case <-time.After(time.Second):
 			}
-
-			<- time.After(250 * time.Millisecond)
+			<-time.After(250 * time.Millisecond)
 		}
 
 		pub.Stop()
 	}(pubChannel)
 
 	for !pub.IsStopped() {
-		<- time.After(time.Second)
+		<-time.After(time.Second)
 	}
 
+	log.Println("Publisher stopped. Exiting.")
 }
