@@ -22,7 +22,7 @@ func minimalSnd() {
 	go func() {
 		count := 1
 		for ecal.Ok() {
-			message := ecal.Message{Content: []byte(fmt.Sprintf("HELLO WORLD FROM GO (%d)", count)),
+			message := ecal.Message{Content: []byte(fmt.Sprintf("Hello World from Go (%d)", count)),
 				Timestamp: -1}
 			count += 1
 			select {
