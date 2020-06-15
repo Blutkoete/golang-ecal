@@ -76,9 +76,8 @@ func main() {
 	} else {
 		switch os.Args[1] {
 		case "minimal_snd":
-			mode = "minimal_snd"
 		case "minimal_rec":
-			mode = "minimal_rec"
+			mode = os.Args[1]
 		default:
 			log.Printf("Unknown sample type \"%s\". Assuming \"minimal_snd\".\n", os.Args[1])
 			mode = "minimal_snd"
