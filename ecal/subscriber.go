@@ -13,17 +13,16 @@ import (
 )
 
 type SubscriberIf interface {
-	GetHandle() uintptr
-	GetBufferSize() int
-
 	Start() error
 	Stop() error
-	Stopped() bool
-
 	Destroy() error
-	Destroyed() bool
 
-	GetChannel() <-chan Message
+	IsStopped() bool
+	IsDestroyed() bool
+
+	GetHandle() uintptr
+	GetBufferSize() int
+	GetOutputChannel() <-chan Message
 	GetTopic() string
 	GetTopicType() string
 	GetTopicDesc() string
@@ -41,16 +40,7 @@ type subscriber struct {
 	mutex      *sync.Mutex
 }
 
-func (sub subscriber) GetHandle() uintptr {
-	return sub.handle
-}
-
-func (sub subscriber) GetBufferSize() int {
-	return sub.bufferSize
-}
-
-func (sub subscriber) Start() error {
-	log.Println("Start() waiting for lock ...")
+func (sub *subscriber) Start() error {
 	sub.mutex.Lock()
 	defer sub.mutex.Unlock()
 
@@ -59,7 +49,7 @@ func (sub subscriber) Start() error {
 	}
 	sub.running = true
 
-	go func(sub subscriber) {
+	go func(sub *subscriber) {
 		cBuffer := C.malloc(C.ulong(sub.bufferSize))
 		defer C.free(cBuffer)
 
@@ -73,12 +63,10 @@ func (sub subscriber) Start() error {
 				log.Println("received more data than pre-allocated")
 				continue
 			}
-			log.Println("received", bytesReceived, "bytes")
 
 			message.Content = make([]byte, bytesReceived, bytesReceived)
 			gBuffer := (*[1 << 30]byte)(cBuffer)
-			bytesCopied := copy(message.Content, gBuffer[:bytesReceived])
-			log.Println("copied", bytesCopied, "bytes")
+			copy(message.Content, gBuffer[:bytesReceived])
 			sub.output <- message
 		}
 
@@ -86,8 +74,7 @@ func (sub subscriber) Start() error {
 	return nil
 }
 
-func (sub subscriber) Stop() error {
-	log.Println("Stop() waiting for lock ...")
+func (sub *subscriber) Stop() error {
 	sub.mutex.Lock()
 	defer sub.mutex.Unlock()
 
@@ -99,16 +86,11 @@ func (sub subscriber) Stop() error {
 	return nil
 }
 
-func (sub subscriber) Stopped() bool {
-	return !sub.running
-}
-
-func (sub subscriber) Destroy() error {
+func (sub *subscriber) Destroy() error {
 	if sub.running {
 		sub.Stop()
 	}
 
-	log.Println("Destroy() waiting for lock ...")
 	sub.mutex.Lock()
 	defer sub.mutex.Unlock()
 
@@ -121,26 +103,38 @@ func (sub subscriber) Destroy() error {
 	return nil
 }
 
-func (sub subscriber) Destroyed() bool {
+func (sub *subscriber) IsStopped() bool {
+	return !sub.running
+}
+
+func (sub *subscriber) IsDestroyed() bool {
 	sub.mutex.Lock()
 	defer sub.mutex.Unlock()
 
 	return sub.destroyed
 }
 
-func (sub subscriber) GetChannel() <-chan Message {
+func (sub *subscriber) GetHandle() uintptr {
+	return sub.handle
+}
+
+func (sub *subscriber) GetBufferSize() int {
+	return sub.bufferSize
+}
+
+func (sub *subscriber) GetOutputChannel() <-chan Message {
 	return sub.output
 }
 
-func (sub subscriber) GetTopic() string {
+func (sub *subscriber) GetTopic() string {
 	return sub.topicName
 }
 
-func (sub subscriber) GetTopicType() string {
+func (sub *subscriber) GetTopicType() string {
 	return sub.topicType
 }
 
-func (sub subscriber) GetTopicDesc() string {
+func (sub *subscriber) GetTopicDesc() string {
 	return sub.topicDesc
 }
 
@@ -175,5 +169,5 @@ func SubscriberCreate(topicName string, topicType string, topicDesc string, star
 		}
 	}
 
-	return sub, nil
+	return &sub, nil
 }
