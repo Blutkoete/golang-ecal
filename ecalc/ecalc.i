@@ -1,9 +1,10 @@
-%module swig
+%module ecalc
 %{
 /* Includes the header in the wrapper code */
 #include "/usr/include/ecal/ecalc.h"
 #include "/usr/include/ecal/ecal_os.h"
 #include "/usr/include/ecal/ecal_defs.h"
+#include "/usr/include/ecal/cimpl/ecal_callback_cimpl.h"
 #include "/usr/include/ecal/cimpl/ecal_core_cimpl.h"
 #include "/usr/include/ecal/cimpl/ecal_event_cimpl.h"
 #include "/usr/include/ecal/cimpl/ecal_init_cimpl.h"
@@ -25,6 +26,7 @@
 %include "/usr/include/ecal/ecalc.h"
 %include "/usr/include/ecal/ecal_os.h"
 %include "/usr/include/ecal/ecal_defs.h"
+%include "/usr/include/ecal/ecal_callback_cimpl.h"
 %include "/usr/include/ecal/cimpl/ecal_core_cimpl.h"
 %include "/usr/include/ecal/cimpl/ecal_event_cimpl.h"
 %include "/usr/include/ecal/cimpl/ecal_init_cimpl.h"
