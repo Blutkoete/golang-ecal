@@ -39,6 +39,8 @@ func minimalSnd() {
 	for !pub.IsStopped() {
 		<-time.After(time.Second)
 	}
+
+	<-time.After(time.Second)
 }
 
 func minimalRec() {

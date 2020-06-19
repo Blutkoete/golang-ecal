@@ -7,6 +7,7 @@ import "C"
 import (
 	"errors"
 	"log"
+	"os"
 	"sync"
 	"unsafe"
 
@@ -72,19 +73,20 @@ func (pub *publisher) Start() error {
 	}
 	pub.running = true
 
-	go func(pub *publisher) {
+	go func() {
 		for !pub.destroyed && pub.running {
 			message := <-pub.inputSource
 
 			pub.mutex.Lock()
-			if !pub.destroyed && pub.running {
+			if Ok() && !pub.destroyed && pub.running {
 				pub.mutex.Unlock()
 				pub.send(message)
 			} else {
 				pub.mutex.Unlock()
+				break
 			}
 		}
-	}(pub)
+	}()
 
 	return nil
 }
@@ -353,6 +355,14 @@ func (pub *publisher) send(message Message) error {
 }
 
 func PublisherCreate(topicName string, topicType string, topicDesc string, start bool) (PublisherIf, error) {
+	var err error
+	if ecalc.ECAL_IsInitialized(InitPublisher) == 0 {
+		err = Initialize(os.Args, os.Args[0], InitPublisher)
+		if err != nil {
+			return nil, err
+		}
+	}
+
 	handle := ecalc.ECAL_Pub_New()
 	if handle == 0 {
 		return nil, errors.New("could not create new publisher")
@@ -377,7 +387,7 @@ func PublisherCreate(topicName string, topicType string, topicDesc string, start
 		id:              -1,
 		mutex:           &sync.Mutex{}}
 	if start {
-		err := pub.Start()
+		err = pub.Start()
 		if err != nil {
 			return nil, err
 		}
