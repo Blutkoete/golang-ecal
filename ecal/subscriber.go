@@ -7,6 +7,7 @@ import "C"
 import (
 	"errors"
 	"log"
+	"os"
 	"sync"
 
 	"golang-ecal/ecalc"
@@ -138,19 +139,27 @@ func (sub *subscriber) GetTopicDesc() string {
 	return sub.topicDesc
 }
 
-func SubscriberCreate(topicName string, topicType string, topicDesc string, start bool, bufferSize int) (SubscriberIf, error) {
+func SubscriberCreate(topicName string, topicType string, topicDesc string, start bool, bufferSize int) (SubscriberIf, <-chan Message, error) {
+	var err error
+	if ecalc.ECAL_IsInitialized(InitSubscriber) == 0 {
+		err = Initialize(os.Args, os.Args[0], InitSubscriber)
+		if err != nil {
+			return nil, nil, err
+		}
+	}
+
 	if bufferSize <= 0 {
-		return nil, errors.New("bufferSize must be larger than zero")
+		return nil, nil, errors.New("bufferSize must be larger than zero")
 	}
 
 	handle := ecalc.ECAL_Sub_New()
 	if handle == 0 {
-		return nil, errors.New("could not create new subscriber")
+		return nil, nil, errors.New("could not create new subscriber")
 	}
 
 	rc := ecalc.ECAL_Sub_Create(handle, topicName, topicType, topicDesc, len(topicDesc))
 	if rc == 0 {
-		return nil, errors.New("could not create new subscriber")
+		return nil, nil, errors.New("could not create new subscriber")
 	}
 
 	sub := subscriber{handle: handle,
@@ -165,9 +174,9 @@ func SubscriberCreate(topicName string, topicType string, topicDesc string, star
 	if start {
 		err := sub.Start()
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 	}
 
-	return &sub, nil
+	return &sub, sub.GetOutputChannel(), nil
 }

@@ -354,23 +354,23 @@ func (pub *publisher) send(message Message) error {
 	return nil
 }
 
-func PublisherCreate(topicName string, topicType string, topicDesc string, start bool) (PublisherIf, error) {
+func PublisherCreate(topicName string, topicType string, topicDesc string, start bool) (PublisherIf, chan<- Message, error) {
 	var err error
 	if ecalc.ECAL_IsInitialized(InitPublisher) == 0 {
 		err = Initialize(os.Args, os.Args[0], InitPublisher)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 	}
 
 	handle := ecalc.ECAL_Pub_New()
 	if handle == 0 {
-		return nil, errors.New("could not create new publisher")
+		return nil, nil, errors.New("could not create new publisher")
 	}
 
 	rc := ecalc.ECAL_Pub_Create(handle, topicName, topicType, topicDesc, len(topicDesc))
 	if rc == 0 {
-		return nil, errors.New("could not create new publisher")
+		return nil, nil, errors.New("could not create new publisher")
 	}
 
 	pub := publisher{handle: handle,
@@ -389,9 +389,9 @@ func PublisherCreate(topicName string, topicType string, topicDesc string, start
 	if start {
 		err = pub.Start()
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 	}
 
-	return &pub, nil
+	return &pub, pub.GetInputChannel(), nil
 }

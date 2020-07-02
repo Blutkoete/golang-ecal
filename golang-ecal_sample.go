@@ -11,14 +11,14 @@ import (
 
 func minimalSnd() {
 	var pub ecal.PublisherIf
+	var pubChannel chan<- ecal.Message
 	var err error
-	pub, err = ecal.PublisherCreate("Hello", "base:std::string", "", true)
+	pub, pubChannel, err = ecal.PublisherCreate("Hello", "base:std::string", "", true)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer pub.Destroy()
 
-	pubChannel := pub.GetInputChannel()
 	go func() {
 		count := 1
 		for ecal.Ok() {
@@ -45,14 +45,14 @@ func minimalSnd() {
 
 func minimalRec() {
 	var sub ecal.SubscriberIf
+	var subChannel <-chan ecal.Message
 	var err error
-	sub, err = ecal.SubscriberCreate("Hello", "base:std::string", "", true, 1024)
+	sub, subChannel, err = ecal.SubscriberCreate("Hello", "base:std::string", "", true, 1024)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer sub.Destroy()
 
-	subChannel := sub.GetOutputChannel()
 	go func() {
 		for ecal.Ok() {
 			select {
@@ -78,6 +78,7 @@ func main() {
 	} else {
 		switch os.Args[1] {
 		case "minimal_snd":
+			mode = os.Args[1]
 		case "minimal_rec":
 			mode = os.Args[1]
 		default:

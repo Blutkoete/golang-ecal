@@ -13,7 +13,6 @@
 package ecalc
 
 /*
-#cgo CFLAGS: -I .
 #cgo LDFLAGS: -lecal_core_c
 #define intgo swig_intgo
 typedef void *swig_voidp;
@@ -368,7 +367,7 @@ func _swig_getECAL_VERSION_PATCH() (_swig_ret int) {
 
 var ECAL_VERSION_PATCH int = _swig_getECAL_VERSION_PATCH()
 const ECAL_VERSION string = "0.0.0"
-const ECAL_DATE string = "10.06.2020"
+const ECAL_DATE string = "28.06.2020"
 func _swig_getECAL_PLATFORMTOOLSET() (_swig_ret string) {
 	var swig_r string
 	swig_r_p := C._wrap_ECAL_PLATFORMTOOLSET_ecalc_5c8096034791d065()
