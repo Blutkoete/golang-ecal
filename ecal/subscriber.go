@@ -9,6 +9,7 @@ import (
 	"log"
 	"os"
 	"sync"
+	"unsafe"
 
 	"golang-ecal/ecalc"
 )
@@ -24,9 +25,19 @@ type SubscriberIf interface {
 	GetHandle() uintptr
 	GetBufferSize() int
 	GetOutputChannel() <-chan Message
+	GetEventChannel() <-chan bool
 	GetTopic() string
-	GetTopicType() string
-	GetTopicDesc() string
+	GetType() string
+	GetDescription() string
+	GetQoS() (ReaderQOS, error)
+	GetIDs() []int64
+	GetTimeout() int
+
+	SetQoS(qos ReaderQOS) error
+	SetIDs(id []int64) error
+	SetTimeout(timeout int) error
+
+	Dump() ([]byte, error)
 }
 
 type subscriber struct {
@@ -34,10 +45,13 @@ type subscriber struct {
 	bufferSize int
 	running    bool
 	destroyed  bool
-	output     chan Message
+	outputSink chan Message
+	eventSink  chan bool
 	topicName  string
 	topicType  string
 	topicDesc  string
+	ids        []int64
+	timeout    int
 	mutex      *sync.Mutex
 }
 
@@ -68,7 +82,7 @@ func (sub *subscriber) Start() error {
 			message.Content = make([]byte, bytesReceived, bytesReceived)
 			gBuffer := (*[1 << 30]byte)(cBuffer)
 			copy(message.Content, gBuffer[:bytesReceived])
-			sub.output <- message
+			sub.outputSink <- message
 		}
 
 	}(sub)
@@ -124,19 +138,124 @@ func (sub *subscriber) GetBufferSize() int {
 }
 
 func (sub *subscriber) GetOutputChannel() <-chan Message {
-	return sub.output
+	return sub.outputSink
+}
+
+func (sub *subscriber) GetEventChannel() <-chan bool {
+	log.Println("events not supported")
+	return sub.eventSink
 }
 
 func (sub *subscriber) GetTopic() string {
 	return sub.topicName
 }
 
-func (sub *subscriber) GetTopicType() string {
+func (sub *subscriber) GetType() string {
 	return sub.topicType
 }
 
-func (sub *subscriber) GetTopicDesc() string {
+func (sub *subscriber) GetDescription() string {
 	return sub.topicDesc
+}
+
+func (sub *subscriber) GetQoS() (ReaderQOS, error) {
+	sub.mutex.Lock()
+	defer sub.mutex.Unlock()
+
+	if sub.destroyed {
+		return ReaderQOS{BestEffortReliability, KeepLastHistoryQOS}, errors.New("subscriber already destroyed")
+	}
+
+	var cQOS ecalc.SReaderQOSC
+	rc := ecalc.ECAL_Sub_GetQOS(sub.handle, cQOS)
+	if rc == 0 {
+		return ReaderQOS{BestEffortReliability, KeepLastHistoryQOS}, errors.New("getting QOS failed")
+	}
+
+	return ReaderQOS{(int)(cQOS.GetReliability()), (int)(cQOS.GetHistory_kind())}, nil
+}
+
+func (sub *subscriber) GetIDs() []int64 {
+	return sub.ids
+}
+
+func (sub *subscriber) GetTimeout() int {
+	return sub.timeout
+}
+
+func (sub *subscriber) SetQoS(qos ReaderQOS) error {
+	sub.mutex.Lock()
+	defer sub.mutex.Unlock()
+
+	if sub.destroyed {
+		return errors.New("subscriber already destroyed")
+	}
+
+	var cQOS ecalc.SReaderQOSC
+	cQOS.SetReliability((ecalc.Enum_SS_eQOSPolicy_ReliabilityC)(qos.Reliability))
+	cQOS.SetHistory_kind((ecalc.Enum_SS_eQOSPolicy_HistoryKindC)(qos.HistoryKind))
+	rc := ecalc.ECAL_Sub_SetQOS(sub.handle, cQOS)
+	if rc == 0 {
+		return errors.New("setting QOS failed")
+	}
+
+	return nil
+}
+
+func (sub *subscriber) SetIDs(ids []int64) error {
+	sub.mutex.Lock()
+	defer sub.mutex.Unlock()
+
+	if sub.destroyed {
+		return errors.New("subscriber already destroyed")
+	}
+
+	rc := ecalc.ECAL_Sub_SetID(sub.handle, (*int64)(unsafe.Pointer(&ids[0])), len(ids))
+	if rc == 0 {
+		return errors.New("setting ids failed")
+	}
+
+	sub.ids = ids
+	return nil
+}
+
+func (sub *subscriber) SetTimeout(timeout int) error {
+	sub.mutex.Lock()
+	defer sub.mutex.Unlock()
+
+	if sub.destroyed {
+		return errors.New("subscriber already destroyed")
+	}
+
+	rc := ecalc.ECAL_Sub_SetTimeout(sub.handle, timeout)
+	if rc == 0 {
+		return errors.New("setting QOS failed")
+	}
+
+	return nil
+}
+
+func (sub *subscriber) Dump() ([]byte, error) {
+	sub.mutex.Lock()
+	defer sub.mutex.Unlock()
+
+	if sub.destroyed {
+		return nil, errors.New("subscriber already destroyed")
+	}
+
+	const bufferSize = 4096
+	cBuffer := C.malloc(bufferSize)
+	defer C.free(cBuffer)
+
+	bytesInDump := ecalc.ECAL_Sub_Dump(sub.handle, (uintptr)(cBuffer), bufferSize)
+	if bytesInDump <= 0 {
+		return nil, errors.New("dump failed")
+	}
+
+	dump := make([]byte, bytesInDump, bytesInDump)
+	gBuffer := (*[1 << 30]byte)(cBuffer)
+	copy(dump, gBuffer[:bytesInDump])
+	return dump, nil
 }
 
 func SubscriberCreate(topicName string, topicType string, topicDesc string, start bool, bufferSize int) (SubscriberIf, <-chan Message, error) {
@@ -166,10 +285,13 @@ func SubscriberCreate(topicName string, topicType string, topicDesc string, star
 		bufferSize: bufferSize,
 		running:    false,
 		destroyed:  false,
-		output:     make(chan Message),
+		outputSink: make(chan Message),
+		eventSink:  make(chan bool),
 		topicName:  topicName,
 		topicType:  topicType,
 		topicDesc:  topicDesc,
+		ids:        make([]int64, 0),
+		timeout:    0,
 		mutex:      &sync.Mutex{}}
 	if start {
 		err := sub.Start()

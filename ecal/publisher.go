@@ -226,7 +226,7 @@ func (pub *publisher) SetQoS(qos WriterQOS) error {
 	var cQOS ecalc.SWriterQOSC
 	cQOS.SetReliability((ecalc.Enum_SS_eQOSPolicy_ReliabilityC)(qos.Reliability))
 	cQOS.SetHistory_kind((ecalc.Enum_SS_eQOSPolicy_HistoryKindC)(qos.HistoryKind))
-	rc := ecalc.ECAL_Pub_GetQOS(pub.handle, cQOS)
+	rc := ecalc.ECAL_Pub_SetQOS(pub.handle, cQOS)
 	if rc == 0 {
 		return errors.New("setting QOS failed")
 	}
