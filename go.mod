@@ -1,4 +1,4 @@
-module golang-ecal
+module github.com/Blutkoete/golang-ecal
 
 go 1.14
 
