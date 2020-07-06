@@ -26,8 +26,8 @@ Sending:
     )
     
     func main() {
-    	var pub ecal.PublisherIf
-	    var pubChannel chan<- ecal.Message
+        var pub ecal.PublisherIf
+        var pubChannel chan<- ecal.Message
         var err error
         pub, pubChannel, err = ecal.PublisherCreate("Hello", "base:std::string", "", true)
         if err != nil {
@@ -65,7 +65,6 @@ Receiving:
     
     import (
         "log"
-        "os"
         "time"
     
         "github.com/Blutkoete/golang-ecal/ecal"
