@@ -41,7 +41,7 @@ Sending:
             case pubChannel <- message:
                 log.Printf("Sent \"%s\"\n", message.Content)
             case <-time.After(time.Second):
-		    }
+            }
             <-time.After(250 * time.Millisecond)
 	    }
     }
