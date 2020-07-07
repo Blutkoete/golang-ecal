@@ -19,11 +19,25 @@
 
 syntax = "proto3";
 
-package pb.Animal;
-option go_package="golang-ecal/ecalpb";
+import "animal.proto";
+import "house.proto";
 
-message Dog
+package pb.People;
+option go_package="pbexample;pbexample";
+
+message Person
 {
-  string name   = 1;
-  string colour = 2;
+  enum SType
+  {
+    MALE   = 0;
+    FEMALE = 1;
+  }
+
+  int32  id               = 1;
+  string name             = 2;
+  SType  stype            = 3;
+  string email            = 4;
+
+  Animal.Dog        dog   = 5;
+  Environment.House house = 6;
 }

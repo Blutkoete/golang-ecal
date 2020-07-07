@@ -19,10 +19,11 @@
 
 syntax = "proto3";
 
-package pb.Environment;
-option go_package="golang-ecal/ecalpb";
+package pb.Animal;
+option go_package="pbexample;pbexample";
 
-message House
+message Dog
 {
-  int32 rooms = 1;
+  string name   = 1;
+  string colour = 2;
 }

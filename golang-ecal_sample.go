@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"google.golang.org/protobuf/proto"
 	"log"
 	"os"
 	"time"
 
 	"github.com/Blutkoete/golang-ecal/ecal"
+	"github.com/Blutkoete/golang-ecal/pbexample"
 )
 
 func minimalSnd() {
@@ -46,6 +48,57 @@ func minimalRec() {
 	}
 }
 
+func personSnd() {
+	pub, pubChannel, err := ecal.PublisherCreate("person", "proto:pb.People.Person", "", true)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer pub.Destroy()
+
+	count := 0
+	for ecal.Ok() {
+		person := &pbexample.Person{Id: (int32)(count),
+			Name: "Max",
+			Email: "max@mail.net",
+			Dog: &pbexample.Dog{Name: "Brandy"},
+			House: &pbexample.House{Rooms: 4},
+		}
+		message := ecal.Message{Timestamp: -1}
+		message.Content, err = proto.Marshal(person)
+		if err != nil {
+			log.Fatal(err)
+		}
+		count += 1
+		select {
+		case pubChannel <- message:
+			log.Printf("Sent \"%s\"\n", person)
+		case <-time.After(time.Second):
+		}
+		<-time.After(250 * time.Millisecond)
+	}
+}
+
+func personRec() {
+	sub, subChannel, err := ecal.SubscriberCreate("person", "proto:pb.People.Person", "", true, 1024)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer sub.Destroy()
+
+	for ecal.Ok() {
+		select {
+		case message := <-subChannel:
+			person := &pbexample.Person{}
+			err = proto.Unmarshal(message.Content, person)
+			if err != nil {
+				log.Fatal(err)
+			}
+			log.Printf("Received \"%s\"\n", person)
+		case <-time.After(time.Second):
+		}
+	}
+}
+
 func main() {
 	var mode string
 	if len(os.Args) <= 1 {
@@ -56,6 +109,10 @@ func main() {
 		case "minimal_snd":
 			mode = os.Args[1]
 		case "minimal_rec":
+			mode = os.Args[1]
+		case "person_snd":
+			mode = os.Args[1]
+		case "person_rec":
 			mode = os.Args[1]
 		default:
 			log.Printf("Unknown sample type \"%s\". Assuming \"minimal_snd\".\n", os.Args[1])
@@ -74,6 +131,10 @@ func main() {
 		minimalSnd()
 	case "minimal_rec":
 		minimalRec()
+	case "person_snd":
+		personSnd()
+	case "person_rec":
+		personRec()
 	default:
 		log.Fatalf("Unknown mode \"%s\".", mode)
 	}

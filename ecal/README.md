@@ -14,7 +14,12 @@ As the full low-level interface is accessible, you can do whatever the eCAL C in
 ## Usage
 GO is about simplicity, so the high-level interface initializes a lot of settings with defaults if you do not call the initialization functions yourself.
 
-Sending:
+### Simple Publisher
+This publisher corresponds to the *ecal_sample_minimal_snd* example coming with eCAL. It is able to communicate with *ecal_sample_minimal_rec* or with the "Simple Subscriber" example. You can also call
+    
+    $ golang-ecal_sample minimal_snd
+    
+to have a simple publisher running.
 
     package main
     
@@ -46,7 +51,12 @@ Sending:
 	    }
     }
 
-Receiving:
+### Simple Subscriber
+This subscriber corresponds to the *ecal_sample_minimal_rec* example coming with eCAL. It is able to communicate with *ecal_sample_minimal_snd* or with the "Simple Publisher" example. You can also call
+    
+    $ golang-ecal_sample minimal_rec
+    
+to have a simple subscriber running.
 
     package main
     
@@ -72,3 +82,23 @@ Receiving:
             }
         }
     }
+
+### Other examples
+*golang-ecal_sample* implements two more examples: Sending and receiving [protobuf](https://developers.google.com/protocol-buffers/) messages via eCAL.
+
+    $ golang-ecal_sample person_snd
+    
+corresponds to *ecal_sample_person_snd* and
+
+    $ golang-ecal_sample person_rec
+    
+to *ecal_sample_person_rec*. For reading eCAL protobuf messages, it basically boils down to very few lines for unmarshalling the []byte message content:
+
+    ...
+    case message := <-subChannel:
+    person := &pbexample.Person{}
+    proto.Unmarshal(message.Content, person)
+    log.Printf("Received \"%s\"\n", person)
+    ...
+    
+See the source of [golang-ecal_sample](https://github.com/Blutkoete/golang-ecal/blob/master/golang-ecal_sample.go) for more details.
