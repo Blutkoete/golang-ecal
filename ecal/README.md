@@ -28,21 +28,21 @@ Sending:
     func main() {
 	    pub, pubChannel, err := ecal.PublisherCreate("Hello", "base:std::string", "", true)
 	    if err != nil {
-		    log.Fatal(err)
+            log.Fatal(err)
 	    }
 	    defer pub.Destroy()
 
 	    count := 0
 	    for ecal.Ok() {
-		    message := ecal.Message{Content: []byte(fmt.Sprintf("Hello World from Go (%d)", count)),
-			                    	Timestamp: -1}
-		    count += 1
-		    select {
-		    case pubChannel <- message:
-			    log.Printf("Sent \"%s\"\n", message.Content)
-		    case <-time.After(time.Second):
+            message := ecal.Message{Content: []byte(fmt.Sprintf("Hello World from Go (%d)", count)),
+                                    Timestamp: -1}
+            count += 1
+            select {
+            case pubChannel <- message:
+                log.Printf("Sent \"%s\"\n", message.Content)
+            case <-time.After(time.Second):
 		    }
-		    <-time.After(250 * time.Millisecond)
+            <-time.After(250 * time.Millisecond)
 	    }
     }
 
@@ -60,15 +60,15 @@ Receiving:
     func main() {
 	    sub, subChannel, err := ecal.SubscriberCreate("Hello", "base:std::string", "", true, 1024)
 	    if err != nil {
-		    log.Fatal(err)
+            log.Fatal(err)
 	    }
 	    defer sub.Destroy()
 
 	    for ecal.Ok() {
-		    select {
-		    case message := <-subChannel:
-			    log.Printf("Received \"%s\"\n", message.Content)
-		    case <-time.After(time.Second):
-		    }
-	    }
+            select {
+            case message := <-subChannel:
+                log.Printf("Received \"%s\"\n", message.Content)
+            case <-time.After(time.Second):
+            }
+        }
     }
