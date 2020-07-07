@@ -5,7 +5,7 @@ import (
 	"errors"
 	"unsafe"
 
-	"golang-ecal/ecalc"
+	"github.com/Blutkoete/golang-ecal/ecalc"
 )
 
 const InitPublisher uint = uint(ecalc.ECAL_Init_Publisher)

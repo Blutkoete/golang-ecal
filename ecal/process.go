@@ -1,7 +1,7 @@
 package ecal
 
 import (
-	"golang-ecal/ecalc"
+	"github.com/Blutkoete/golang-ecal/ecalc"
 )
 
 func ProcessSleepMS(sleepTimeMs int64) {

@@ -11,7 +11,7 @@ import (
 	"sync"
 	"unsafe"
 
-	"golang-ecal/ecalc"
+	"github.com/Blutkoete/golang-ecal/ecalc"
 )
 
 type PublisherIf interface {
