@@ -8,11 +8,12 @@
  * interface file instead.
  * ----------------------------------------------------------------------------- */
 
-// source: ecalc.i
+// source: ecalc_usr_local.i
 
 package ecalc
 
 /*
+#cgo CFLAGS: -I .
 #cgo LDFLAGS: -lecal_core_c
 #define intgo swig_intgo
 typedef void *swig_voidp;
