@@ -8,7 +8,7 @@
  * interface file instead.
  * ----------------------------------------------------------------------------- */
 
-// source: ecalc_usr_local.i
+// source: ecalc_usr.i
 
 package ecalc
 
@@ -107,202 +107,202 @@ typedef void* swig_type_74;
 typedef _gostring_ swig_type_75;
 typedef _gostring_ swig_type_76;
 typedef _gostring_ swig_type_77;
-extern void _wrap_Swig_free_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_Swig_malloc_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern swig_intgo _wrap_ECAL_VERSION_MAJOR_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_ECAL_VERSION_MINOR_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_ECAL_VERSION_PATCH_ecalc_c74bfc12973b0062(void);
-extern swig_type_1 _wrap_ECAL_PLATFORMTOOLSET_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_sub_event_none_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_sub_event_connected_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_sub_event_disconnected_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_sub_event_dropped_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_sub_event_timeout_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_sub_event_corrupted_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_pub_event_none_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_pub_event_connected_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_pub_event_disconnected_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_pub_event_dropped_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_reg_event_none_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_reg_event_publisher_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_reg_event_subscriber_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_reg_event_service_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_reg_event_process_ecalc_c74bfc12973b0062(void);
-extern void _wrap_SReceiveCallbackDataC_buf_set_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2);
-extern uintptr_t _wrap_SReceiveCallbackDataC_buf_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SReceiveCallbackDataC_size_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_2 arg2);
-extern swig_type_3 _wrap_SReceiveCallbackDataC_size_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SReceiveCallbackDataC_id_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_4 arg2);
-extern swig_type_5 _wrap_SReceiveCallbackDataC_id_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SReceiveCallbackDataC_time_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_6 arg2);
-extern swig_type_7 _wrap_SReceiveCallbackDataC_time_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SReceiveCallbackDataC_clock_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_8 arg2);
-extern swig_type_9 _wrap_SReceiveCallbackDataC_clock_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_new_SReceiveCallbackDataC_ecalc_c74bfc12973b0062(void);
-extern void _wrap_delete_SReceiveCallbackDataC_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SPubEventCallbackDataC_Xtype_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SPubEventCallbackDataC_Xtype_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SPubEventCallbackDataC_time_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_10 arg2);
-extern swig_type_11 _wrap_SPubEventCallbackDataC_time_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SPubEventCallbackDataC_clock_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_12 arg2);
-extern swig_type_13 _wrap_SPubEventCallbackDataC_clock_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_new_SPubEventCallbackDataC_ecalc_c74bfc12973b0062(void);
-extern void _wrap_delete_SPubEventCallbackDataC_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SSubEventCallbackDataC_Xtype_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SSubEventCallbackDataC_Xtype_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SSubEventCallbackDataC_time_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_14 arg2);
-extern swig_type_15 _wrap_SSubEventCallbackDataC_time_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SSubEventCallbackDataC_clock_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_16 arg2);
-extern swig_type_17 _wrap_SSubEventCallbackDataC_clock_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_new_SSubEventCallbackDataC_ecalc_c74bfc12973b0062(void);
-extern void _wrap_delete_SSubEventCallbackDataC_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_type_18 _wrap_eCAL_GetVersionString_ecalc_c74bfc12973b0062(void);
-extern swig_type_19 _wrap_eCAL_GetVersionDateString_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_GetVersion_ecalc_c74bfc12973b0062(swig_voidp arg1, swig_voidp arg2, swig_voidp arg3);
-extern swig_intgo _wrap_eCAL_Initialize_ecalc_c74bfc12973b0062(swig_intgo arg1, swig_voidp arg2, swig_type_20 arg3, swig_intgo arg4);
-extern swig_intgo _wrap_eCAL_SetUnitName_ecalc_c74bfc12973b0062(swig_type_21 arg1);
-extern swig_intgo _wrap_eCAL_Finalize_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern swig_intgo _wrap_eCAL_IsInitialized_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern swig_intgo _wrap_eCAL_Ok_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_FreeMem_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_eCAL_Event_gOpenEvent_ecalc_c74bfc12973b0062(swig_type_22 arg1);
-extern swig_intgo _wrap_eCAL_Event_gCloseEvent_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Event_gSetEvent_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Event_gWaitForEvent_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_23 arg2);
-extern swig_intgo _wrap_eCAL_Event_gEventIsValid_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Init_All_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Init_Default_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Logging_SetLogLevel_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern swig_intgo _wrap_eCAL_Logging_GetLogLevel_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Logging_Log_ecalc_c74bfc12973b0062(swig_type_24 arg1);
-extern void _wrap_eCAL_Logging_StartCoreTimer_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Logging_StopCoreTimer_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Logging_SetCoreTime_ecalc_c74bfc12973b0062(double arg1);
-extern double _wrap_eCAL_Logging_GetCoreTime_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Monitoring_SetExclFilter_ecalc_c74bfc12973b0062(swig_type_25 arg1);
-extern swig_intgo _wrap_eCAL_Monitoring_SetInclFilter_ecalc_c74bfc12973b0062(swig_type_26 arg1);
-extern swig_intgo _wrap_eCAL_Monitoring_SetFilterState_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern swig_intgo _wrap_eCAL_Monitoring_GetMonitoring_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Monitoring_GetLogging_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Monitoring_PubMonitoring_ecalc_c74bfc12973b0062(swig_intgo arg1, swig_type_27 arg2);
-extern swig_intgo _wrap_eCAL_Monitoring_PubLogging_ecalc_c74bfc12973b0062(swig_intgo arg1, swig_type_28 arg2);
-extern void _wrap_eCAL_Process_DumpConfig_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Process_GetHostName_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Process_GetHostID_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Process_GetUnitName_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Process_GetTaskParameter_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2, swig_type_29 arg3);
-extern void _wrap_eCAL_Process_SleepMS_ecalc_c74bfc12973b0062(swig_type_30 arg1);
-extern swig_intgo _wrap_eCAL_Process_GetProcessID_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Process_GetProcessName_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Process_GetProcessParameter_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern float _wrap_eCAL_Process_GetProcessCpuUsage_ecalc_c74bfc12973b0062(void);
-extern swig_type_31 _wrap_eCAL_Process_GetProcessMemory_ecalc_c74bfc12973b0062(void);
-extern swig_type_32 _wrap_eCAL_Process_GetSClock_ecalc_c74bfc12973b0062(void);
-extern swig_type_33 _wrap_eCAL_Process_GetSBytes_ecalc_c74bfc12973b0062(void);
-extern swig_type_34 _wrap_eCAL_Process_GetWClock_ecalc_c74bfc12973b0062(void);
-extern swig_type_35 _wrap_eCAL_Process_GetWBytes_ecalc_c74bfc12973b0062(void);
-extern swig_type_36 _wrap_eCAL_Process_GetRClock_ecalc_c74bfc12973b0062(void);
-extern swig_type_37 _wrap_eCAL_Process_GetRBytes_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Process_SetState_ecalc_c74bfc12973b0062(swig_intgo arg1, swig_intgo arg2, swig_type_38 arg3);
-extern swig_intgo _wrap_eCAL_Process_StartProcess_ecalc_c74bfc12973b0062(swig_type_39 arg1, swig_type_40 arg2, swig_type_41 arg3, swig_intgo arg4, swig_intgo arg5, swig_intgo arg6);
-extern swig_intgo _wrap_eCAL_Process_StopProcessName_ecalc_c74bfc12973b0062(swig_type_42 arg1);
-extern swig_intgo _wrap_eCAL_Process_StopProcessID_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern uintptr_t _wrap_eCAL_Pub_New_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Pub_Create_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_43 arg2, swig_type_44 arg3, swig_type_45 arg4, swig_intgo arg5);
-extern swig_intgo _wrap_eCAL_Pub_Destroy_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Pub_SetDescription_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_46 arg2, swig_intgo arg3);
-extern swig_intgo _wrap_eCAL_Pub_ShareType_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Pub_ShareDescription_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Pub_SetQOS_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2);
-extern swig_intgo _wrap_eCAL_Pub_GetQOS_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2);
-extern swig_intgo _wrap_eCAL_Pub_SetLayerMode_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2, swig_intgo arg3);
-extern swig_intgo _wrap_eCAL_Pub_SetMaxBandwidthUDP_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_47 arg2);
-extern swig_intgo _wrap_eCAL_Pub_SetID_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_48 arg2);
-extern swig_intgo _wrap_eCAL_Pub_IsSubscribed_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Pub_Send_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, swig_type_49 arg4);
-extern swig_intgo _wrap_eCAL_Pub_AddEventCallbackC_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2, swig_type_50 arg3, uintptr_t arg4);
-extern swig_intgo _wrap_eCAL_Pub_RemEventCallback_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Pub_Dump_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
-extern swig_intgo _wrap_keep_last_history_qos_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_keep_all_history_qos_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_best_effort_reliability_qos_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_reliable_reliability_qos_ecalc_c74bfc12973b0062(void);
-extern void _wrap_SWriterQOSC_history_kind_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SWriterQOSC_history_kind_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SWriterQOSC_history_kind_depth_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SWriterQOSC_history_kind_depth_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SWriterQOSC_reliability_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SWriterQOSC_reliability_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_new_SWriterQOSC_ecalc_c74bfc12973b0062(void);
-extern void _wrap_delete_SWriterQOSC_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SReaderQOSC_history_kind_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SReaderQOSC_history_kind_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SReaderQOSC_history_kind_depth_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SReaderQOSC_history_kind_depth_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern void _wrap_SReaderQOSC_reliability_set_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_SReaderQOSC_reliability_get_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_new_SReaderQOSC_ecalc_c74bfc12973b0062(void);
-extern void _wrap_delete_SReaderQOSC_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_eCAL_Server_Create_ecalc_c74bfc12973b0062(swig_type_51 arg1);
-extern swig_intgo _wrap_eCAL_Server_Destroy_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Server_AddMethodCallbackC_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_52 arg2, swig_type_53 arg3, swig_type_54 arg4, uintptr_t arg5, uintptr_t arg6);
-extern swig_intgo _wrap_eCAL_Server_RemMethodCallbackC_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_55 arg2);
-extern swig_intgo _wrap_eCAL_Server_GetServiceName_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
-extern uintptr_t _wrap_eCAL_Client_Create_ecalc_c74bfc12973b0062(swig_type_56 arg1);
-extern swig_intgo _wrap_eCAL_Client_Destroy_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Client_SetHostName_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_57 arg2);
-extern swig_intgo _wrap_eCAL_Client_Call_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_58 arg2, swig_type_59 arg3, swig_intgo arg4);
-extern swig_intgo _wrap_eCAL_Client_Call_Wait_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_60 arg2, swig_type_61 arg3, swig_type_62 arg4, swig_intgo arg5, uintptr_t arg6, uintptr_t arg7, swig_intgo arg8);
-extern swig_intgo _wrap_eCAL_Client_AddResponseCallbackC_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
-extern swig_intgo _wrap_eCAL_Client_RemResponseCallback_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern uintptr_t _wrap_eCAL_Sub_New_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Sub_Create_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_63 arg2, swig_type_64 arg3, swig_type_65 arg4, swig_intgo arg5);
-extern swig_intgo _wrap_eCAL_Sub_Destroy_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Sub_SetQOS_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2);
-extern swig_intgo _wrap_eCAL_Sub_GetQOS_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2);
-extern swig_intgo _wrap_eCAL_Sub_SetID_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_voidp arg2, swig_intgo arg3);
-extern swig_intgo _wrap_eCAL_Sub_Receive_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, swig_voidp arg4, swig_intgo arg5);
-extern swig_intgo _wrap_eCAL_Sub_Receive_ToBuffer_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, swig_voidp arg4, swig_intgo arg5);
-extern swig_intgo _wrap_eCAL_Sub_Receive_Alloc_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_voidp arg2, swig_voidp arg3, swig_intgo arg4);
-extern swig_intgo _wrap_eCAL_Sub_AddReceiveCallbackC_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_66 arg2, uintptr_t arg3);
-extern swig_intgo _wrap_eCAL_Sub_RemReceiveCallback_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Sub_AddEventCallbackC_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2, swig_type_67 arg3, uintptr_t arg4);
-extern swig_intgo _wrap_eCAL_Sub_RemEventCallback_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Sub_GetDescription_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
-extern swig_intgo _wrap_eCAL_Sub_SetTimeout_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_intgo _wrap_eCAL_Sub_Dump_ecalc_c74bfc12973b0062(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
-extern uintptr_t _wrap_eCAL_Proto_Dyn_JSON_Sub_Create_ecalc_c74bfc12973b0062(swig_type_68 arg1);
-extern swig_intgo _wrap_eCAL_Proto_Dyn_JSON_Sub_Destroy_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Proto_Dyn_JSON_Sub_AddReceiveCallbackC_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_type_69 arg2, uintptr_t arg3);
-extern swig_intgo _wrap_eCAL_Proto_Dyn_JSON_Sub_RemReceiveCallback_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Time_GetName_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2);
-extern swig_type_70 _wrap_eCAL_Time_GetMicroSeconds_ecalc_c74bfc12973b0062(void);
-extern swig_type_71 _wrap_eCAL_Time_GetNanoSeconds_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Time_SetNanoSeconds_ecalc_c74bfc12973b0062(swig_type_72 arg1);
-extern swig_intgo _wrap_eCAL_Time_IsTimeSynchronized_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Time_IsTimeMaster_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Time_SleepForNanoseconds_ecalc_c74bfc12973b0062(swig_type_73 arg1);
-extern swig_intgo _wrap_eCAL_Time_GetStatus_ecalc_c74bfc12973b0062(swig_voidp arg1, swig_voidp arg2, swig_intgo arg3);
-extern uintptr_t _wrap_eCAL_Timer_Create_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_eCAL_Timer_Destroy_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_eCAL_Timer_Start_ecalc_c74bfc12973b0062(uintptr_t arg1, swig_intgo arg2, swig_type_74 arg3, swig_intgo arg4, uintptr_t arg5);
-extern swig_intgo _wrap_eCAL_Timer_Stop_ecalc_c74bfc12973b0062(uintptr_t arg1);
-extern swig_intgo _wrap_tlayer_none_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_tlayer_udp_mc_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_tlayer_shm_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_tlayer_inproc_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_tlayer_all_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_smode_none_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_smode_off_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_smode_on_ecalc_c74bfc12973b0062(void);
-extern swig_intgo _wrap_smode_auto_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Util_ShutdownUnitName_ecalc_c74bfc12973b0062(swig_type_75 arg1);
-extern void _wrap_eCAL_Util_ShutdownProcessID_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern void _wrap_eCAL_Util_ShutdownProcesses_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Util_ShutdownCore_ecalc_c74bfc12973b0062(void);
-extern void _wrap_eCAL_Util_EnableLoopback_ecalc_c74bfc12973b0062(swig_intgo arg1);
-extern swig_intgo _wrap_eCAL_Util_GetTypeName_ecalc_c74bfc12973b0062(swig_type_76 arg1, uintptr_t arg2, swig_intgo arg3);
-extern swig_intgo _wrap_eCAL_Util_GetDescription_ecalc_c74bfc12973b0062(swig_type_77 arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_Swig_free_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_Swig_malloc_ecalc_5c8096034791d065(swig_intgo arg1);
+extern swig_intgo _wrap_ECAL_VERSION_MAJOR_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_ECAL_VERSION_MINOR_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_ECAL_VERSION_PATCH_ecalc_5c8096034791d065(void);
+extern swig_type_1 _wrap_ECAL_PLATFORMTOOLSET_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_sub_event_none_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_sub_event_connected_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_sub_event_disconnected_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_sub_event_dropped_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_sub_event_timeout_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_sub_event_corrupted_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_pub_event_none_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_pub_event_connected_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_pub_event_disconnected_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_pub_event_dropped_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_reg_event_none_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_reg_event_publisher_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_reg_event_subscriber_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_reg_event_service_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_reg_event_process_ecalc_5c8096034791d065(void);
+extern void _wrap_SReceiveCallbackDataC_buf_set_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_SReceiveCallbackDataC_buf_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SReceiveCallbackDataC_size_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_2 arg2);
+extern swig_type_3 _wrap_SReceiveCallbackDataC_size_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SReceiveCallbackDataC_id_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_4 arg2);
+extern swig_type_5 _wrap_SReceiveCallbackDataC_id_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SReceiveCallbackDataC_time_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_6 arg2);
+extern swig_type_7 _wrap_SReceiveCallbackDataC_time_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SReceiveCallbackDataC_clock_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_8 arg2);
+extern swig_type_9 _wrap_SReceiveCallbackDataC_clock_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_new_SReceiveCallbackDataC_ecalc_5c8096034791d065(void);
+extern void _wrap_delete_SReceiveCallbackDataC_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SPubEventCallbackDataC_Xtype_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SPubEventCallbackDataC_Xtype_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SPubEventCallbackDataC_time_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_10 arg2);
+extern swig_type_11 _wrap_SPubEventCallbackDataC_time_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SPubEventCallbackDataC_clock_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_12 arg2);
+extern swig_type_13 _wrap_SPubEventCallbackDataC_clock_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_new_SPubEventCallbackDataC_ecalc_5c8096034791d065(void);
+extern void _wrap_delete_SPubEventCallbackDataC_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SSubEventCallbackDataC_Xtype_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SSubEventCallbackDataC_Xtype_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SSubEventCallbackDataC_time_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_14 arg2);
+extern swig_type_15 _wrap_SSubEventCallbackDataC_time_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SSubEventCallbackDataC_clock_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_16 arg2);
+extern swig_type_17 _wrap_SSubEventCallbackDataC_clock_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_new_SSubEventCallbackDataC_ecalc_5c8096034791d065(void);
+extern void _wrap_delete_SSubEventCallbackDataC_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_type_18 _wrap_eCAL_GetVersionString_ecalc_5c8096034791d065(void);
+extern swig_type_19 _wrap_eCAL_GetVersionDateString_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_GetVersion_ecalc_5c8096034791d065(swig_voidp arg1, swig_voidp arg2, swig_voidp arg3);
+extern swig_intgo _wrap_eCAL_Initialize_ecalc_5c8096034791d065(swig_intgo arg1, swig_voidp arg2, swig_type_20 arg3, swig_intgo arg4);
+extern swig_intgo _wrap_eCAL_SetUnitName_ecalc_5c8096034791d065(swig_type_21 arg1);
+extern swig_intgo _wrap_eCAL_Finalize_ecalc_5c8096034791d065(swig_intgo arg1);
+extern swig_intgo _wrap_eCAL_IsInitialized_ecalc_5c8096034791d065(swig_intgo arg1);
+extern swig_intgo _wrap_eCAL_Ok_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_FreeMem_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_eCAL_Event_gOpenEvent_ecalc_5c8096034791d065(swig_type_22 arg1);
+extern swig_intgo _wrap_eCAL_Event_gCloseEvent_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Event_gSetEvent_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Event_gWaitForEvent_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_23 arg2);
+extern swig_intgo _wrap_eCAL_Event_gEventIsValid_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Init_All_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Init_Default_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Logging_SetLogLevel_ecalc_5c8096034791d065(swig_intgo arg1);
+extern swig_intgo _wrap_eCAL_Logging_GetLogLevel_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Logging_Log_ecalc_5c8096034791d065(swig_type_24 arg1);
+extern void _wrap_eCAL_Logging_StartCoreTimer_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Logging_StopCoreTimer_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Logging_SetCoreTime_ecalc_5c8096034791d065(double arg1);
+extern double _wrap_eCAL_Logging_GetCoreTime_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Monitoring_SetExclFilter_ecalc_5c8096034791d065(swig_type_25 arg1);
+extern swig_intgo _wrap_eCAL_Monitoring_SetInclFilter_ecalc_5c8096034791d065(swig_type_26 arg1);
+extern swig_intgo _wrap_eCAL_Monitoring_SetFilterState_ecalc_5c8096034791d065(swig_intgo arg1);
+extern swig_intgo _wrap_eCAL_Monitoring_GetMonitoring_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Monitoring_GetLogging_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Monitoring_PubMonitoring_ecalc_5c8096034791d065(swig_intgo arg1, swig_type_27 arg2);
+extern swig_intgo _wrap_eCAL_Monitoring_PubLogging_ecalc_5c8096034791d065(swig_intgo arg1, swig_type_28 arg2);
+extern void _wrap_eCAL_Process_DumpConfig_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Process_GetHostName_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Process_GetHostID_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Process_GetUnitName_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Process_GetTaskParameter_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2, swig_type_29 arg3);
+extern void _wrap_eCAL_Process_SleepMS_ecalc_5c8096034791d065(swig_type_30 arg1);
+extern swig_intgo _wrap_eCAL_Process_GetProcessID_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Process_GetProcessName_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Process_GetProcessParameter_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern float _wrap_eCAL_Process_GetProcessCpuUsage_ecalc_5c8096034791d065(void);
+extern swig_type_31 _wrap_eCAL_Process_GetProcessMemory_ecalc_5c8096034791d065(void);
+extern swig_type_32 _wrap_eCAL_Process_GetSClock_ecalc_5c8096034791d065(void);
+extern swig_type_33 _wrap_eCAL_Process_GetSBytes_ecalc_5c8096034791d065(void);
+extern swig_type_34 _wrap_eCAL_Process_GetWClock_ecalc_5c8096034791d065(void);
+extern swig_type_35 _wrap_eCAL_Process_GetWBytes_ecalc_5c8096034791d065(void);
+extern swig_type_36 _wrap_eCAL_Process_GetRClock_ecalc_5c8096034791d065(void);
+extern swig_type_37 _wrap_eCAL_Process_GetRBytes_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Process_SetState_ecalc_5c8096034791d065(swig_intgo arg1, swig_intgo arg2, swig_type_38 arg3);
+extern swig_intgo _wrap_eCAL_Process_StartProcess_ecalc_5c8096034791d065(swig_type_39 arg1, swig_type_40 arg2, swig_type_41 arg3, swig_intgo arg4, swig_intgo arg5, swig_intgo arg6);
+extern swig_intgo _wrap_eCAL_Process_StopProcessName_ecalc_5c8096034791d065(swig_type_42 arg1);
+extern swig_intgo _wrap_eCAL_Process_StopProcessID_ecalc_5c8096034791d065(swig_intgo arg1);
+extern uintptr_t _wrap_eCAL_Pub_New_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Pub_Create_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_43 arg2, swig_type_44 arg3, swig_type_45 arg4, swig_intgo arg5);
+extern swig_intgo _wrap_eCAL_Pub_Destroy_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Pub_SetDescription_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_46 arg2, swig_intgo arg3);
+extern swig_intgo _wrap_eCAL_Pub_ShareType_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Pub_ShareDescription_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Pub_SetQOS_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_eCAL_Pub_GetQOS_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_eCAL_Pub_SetLayerMode_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2, swig_intgo arg3);
+extern swig_intgo _wrap_eCAL_Pub_SetMaxBandwidthUDP_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_47 arg2);
+extern swig_intgo _wrap_eCAL_Pub_SetID_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_48 arg2);
+extern swig_intgo _wrap_eCAL_Pub_IsSubscribed_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Pub_Send_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, swig_type_49 arg4);
+extern swig_intgo _wrap_eCAL_Pub_AddEventCallbackC_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2, swig_type_50 arg3, uintptr_t arg4);
+extern swig_intgo _wrap_eCAL_Pub_RemEventCallback_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Pub_Dump_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern swig_intgo _wrap_keep_last_history_qos_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_keep_all_history_qos_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_best_effort_reliability_qos_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_reliable_reliability_qos_ecalc_5c8096034791d065(void);
+extern void _wrap_SWriterQOSC_history_kind_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SWriterQOSC_history_kind_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SWriterQOSC_history_kind_depth_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SWriterQOSC_history_kind_depth_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SWriterQOSC_reliability_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SWriterQOSC_reliability_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_new_SWriterQOSC_ecalc_5c8096034791d065(void);
+extern void _wrap_delete_SWriterQOSC_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SReaderQOSC_history_kind_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SReaderQOSC_history_kind_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SReaderQOSC_history_kind_depth_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SReaderQOSC_history_kind_depth_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern void _wrap_SReaderQOSC_reliability_set_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SReaderQOSC_reliability_get_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_new_SReaderQOSC_ecalc_5c8096034791d065(void);
+extern void _wrap_delete_SReaderQOSC_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_eCAL_Server_Create_ecalc_5c8096034791d065(swig_type_51 arg1);
+extern swig_intgo _wrap_eCAL_Server_Destroy_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Server_AddMethodCallbackC_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_52 arg2, swig_type_53 arg3, swig_type_54 arg4, uintptr_t arg5, uintptr_t arg6);
+extern swig_intgo _wrap_eCAL_Server_RemMethodCallbackC_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_55 arg2);
+extern swig_intgo _wrap_eCAL_Server_GetServiceName_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_eCAL_Client_Create_ecalc_5c8096034791d065(swig_type_56 arg1);
+extern swig_intgo _wrap_eCAL_Client_Destroy_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Client_SetHostName_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_57 arg2);
+extern swig_intgo _wrap_eCAL_Client_Call_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_58 arg2, swig_type_59 arg3, swig_intgo arg4);
+extern swig_intgo _wrap_eCAL_Client_Call_Wait_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_60 arg2, swig_type_61 arg3, swig_type_62 arg4, swig_intgo arg5, uintptr_t arg6, uintptr_t arg7, swig_intgo arg8);
+extern swig_intgo _wrap_eCAL_Client_AddResponseCallbackC_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_eCAL_Client_RemResponseCallback_ecalc_5c8096034791d065(uintptr_t arg1);
+extern uintptr_t _wrap_eCAL_Sub_New_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Sub_Create_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_63 arg2, swig_type_64 arg3, swig_type_65 arg4, swig_intgo arg5);
+extern swig_intgo _wrap_eCAL_Sub_Destroy_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Sub_SetQOS_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_eCAL_Sub_GetQOS_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_eCAL_Sub_SetID_ecalc_5c8096034791d065(uintptr_t arg1, swig_voidp arg2, swig_intgo arg3);
+extern swig_intgo _wrap_eCAL_Sub_Receive_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, swig_voidp arg4, swig_intgo arg5);
+extern swig_intgo _wrap_eCAL_Sub_Receive_ToBuffer_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, swig_voidp arg4, swig_intgo arg5);
+extern swig_intgo _wrap_eCAL_Sub_Receive_Alloc_ecalc_5c8096034791d065(uintptr_t arg1, swig_voidp arg2, swig_voidp arg3, swig_intgo arg4);
+extern swig_intgo _wrap_eCAL_Sub_AddReceiveCallbackC_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_66 arg2, uintptr_t arg3);
+extern swig_intgo _wrap_eCAL_Sub_RemReceiveCallback_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Sub_AddEventCallbackC_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2, swig_type_67 arg3, uintptr_t arg4);
+extern swig_intgo _wrap_eCAL_Sub_RemEventCallback_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Sub_GetDescription_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern swig_intgo _wrap_eCAL_Sub_SetTimeout_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_eCAL_Sub_Dump_ecalc_5c8096034791d065(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_eCAL_Proto_Dyn_JSON_Sub_Create_ecalc_5c8096034791d065(swig_type_68 arg1);
+extern swig_intgo _wrap_eCAL_Proto_Dyn_JSON_Sub_Destroy_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Proto_Dyn_JSON_Sub_AddReceiveCallbackC_ecalc_5c8096034791d065(uintptr_t arg1, swig_type_69 arg2, uintptr_t arg3);
+extern swig_intgo _wrap_eCAL_Proto_Dyn_JSON_Sub_RemReceiveCallback_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Time_GetName_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2);
+extern swig_type_70 _wrap_eCAL_Time_GetMicroSeconds_ecalc_5c8096034791d065(void);
+extern swig_type_71 _wrap_eCAL_Time_GetNanoSeconds_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Time_SetNanoSeconds_ecalc_5c8096034791d065(swig_type_72 arg1);
+extern swig_intgo _wrap_eCAL_Time_IsTimeSynchronized_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Time_IsTimeMaster_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Time_SleepForNanoseconds_ecalc_5c8096034791d065(swig_type_73 arg1);
+extern swig_intgo _wrap_eCAL_Time_GetStatus_ecalc_5c8096034791d065(swig_voidp arg1, swig_voidp arg2, swig_intgo arg3);
+extern uintptr_t _wrap_eCAL_Timer_Create_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_eCAL_Timer_Destroy_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_eCAL_Timer_Start_ecalc_5c8096034791d065(uintptr_t arg1, swig_intgo arg2, swig_type_74 arg3, swig_intgo arg4, uintptr_t arg5);
+extern swig_intgo _wrap_eCAL_Timer_Stop_ecalc_5c8096034791d065(uintptr_t arg1);
+extern swig_intgo _wrap_tlayer_none_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_tlayer_udp_mc_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_tlayer_shm_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_tlayer_inproc_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_tlayer_all_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_smode_none_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_smode_off_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_smode_on_ecalc_5c8096034791d065(void);
+extern swig_intgo _wrap_smode_auto_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Util_ShutdownUnitName_ecalc_5c8096034791d065(swig_type_75 arg1);
+extern void _wrap_eCAL_Util_ShutdownProcessID_ecalc_5c8096034791d065(swig_intgo arg1);
+extern void _wrap_eCAL_Util_ShutdownProcesses_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Util_ShutdownCore_ecalc_5c8096034791d065(void);
+extern void _wrap_eCAL_Util_EnableLoopback_ecalc_5c8096034791d065(swig_intgo arg1);
+extern swig_intgo _wrap_eCAL_Util_GetTypeName_ecalc_5c8096034791d065(swig_type_76 arg1, uintptr_t arg2, swig_intgo arg3);
+extern swig_intgo _wrap_eCAL_Util_GetDescription_ecalc_5c8096034791d065(swig_type_77 arg1, uintptr_t arg2, swig_intgo arg3);
 #undef intgo
 */
 import "C"
@@ -337,43 +337,43 @@ func swigCopyString(s string) string {
 
 func Swig_free(arg1 uintptr) {
 	_swig_i_0 := arg1
-	C._wrap_Swig_free_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0))
+	C._wrap_Swig_free_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0))
 }
 
 func Swig_malloc(arg1 int) (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_Swig_malloc_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0)))
+	swig_r = (uintptr)(C._wrap_Swig_malloc_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
 const ECAL_ALLOCATE_4ME int = 0
 func _swig_getECAL_VERSION_MAJOR() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_ECAL_VERSION_MAJOR_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_ECAL_VERSION_MAJOR_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var ECAL_VERSION_MAJOR int = _swig_getECAL_VERSION_MAJOR()
 func _swig_getECAL_VERSION_MINOR() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_ECAL_VERSION_MINOR_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_ECAL_VERSION_MINOR_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var ECAL_VERSION_MINOR int = _swig_getECAL_VERSION_MINOR()
 func _swig_getECAL_VERSION_PATCH() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_ECAL_VERSION_PATCH_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_ECAL_VERSION_PATCH_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var ECAL_VERSION_PATCH int = _swig_getECAL_VERSION_PATCH()
-const ECAL_VERSION string = "v5.6.0-7-gce18206"
-const ECAL_DATE string = "22.07.2020"
+const ECAL_VERSION string = "v5.7.2-2-g5f78381"
+const ECAL_DATE string = "02.09.2020"
 func _swig_getECAL_PLATFORMTOOLSET() (_swig_ret string) {
 	var swig_r string
-	swig_r_p := C._wrap_ECAL_PLATFORMTOOLSET_ecalc_c74bfc12973b0062()
+	swig_r_p := C._wrap_ECAL_PLATFORMTOOLSET_ecalc_5c8096034791d065()
 	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
 	var swig_r_1 string
  swig_r_1 = swigCopyString(swig_r) 
@@ -384,42 +384,42 @@ var ECAL_PLATFORMTOOLSET string = _swig_getECAL_PLATFORMTOOLSET()
 type Enum_SS_eCAL_Subscriber_Event int
 func _swig_getsub_event_none() (_swig_ret Enum_SS_eCAL_Subscriber_Event) {
 	var swig_r Enum_SS_eCAL_Subscriber_Event
-	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_none_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_none_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Sub_event_none Enum_SS_eCAL_Subscriber_Event = _swig_getsub_event_none()
 func _swig_getsub_event_connected() (_swig_ret Enum_SS_eCAL_Subscriber_Event) {
 	var swig_r Enum_SS_eCAL_Subscriber_Event
-	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_connected_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_connected_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Sub_event_connected Enum_SS_eCAL_Subscriber_Event = _swig_getsub_event_connected()
 func _swig_getsub_event_disconnected() (_swig_ret Enum_SS_eCAL_Subscriber_Event) {
 	var swig_r Enum_SS_eCAL_Subscriber_Event
-	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_disconnected_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_disconnected_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Sub_event_disconnected Enum_SS_eCAL_Subscriber_Event = _swig_getsub_event_disconnected()
 func _swig_getsub_event_dropped() (_swig_ret Enum_SS_eCAL_Subscriber_Event) {
 	var swig_r Enum_SS_eCAL_Subscriber_Event
-	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_dropped_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_dropped_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Sub_event_dropped Enum_SS_eCAL_Subscriber_Event = _swig_getsub_event_dropped()
 func _swig_getsub_event_timeout() (_swig_ret Enum_SS_eCAL_Subscriber_Event) {
 	var swig_r Enum_SS_eCAL_Subscriber_Event
-	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_timeout_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_timeout_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Sub_event_timeout Enum_SS_eCAL_Subscriber_Event = _swig_getsub_event_timeout()
 func _swig_getsub_event_corrupted() (_swig_ret Enum_SS_eCAL_Subscriber_Event) {
 	var swig_r Enum_SS_eCAL_Subscriber_Event
-	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_corrupted_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_sub_event_corrupted_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -427,28 +427,28 @@ var Sub_event_corrupted Enum_SS_eCAL_Subscriber_Event = _swig_getsub_event_corru
 type Enum_SS_eCAL_Publisher_Event int
 func _swig_getpub_event_none() (_swig_ret Enum_SS_eCAL_Publisher_Event) {
 	var swig_r Enum_SS_eCAL_Publisher_Event
-	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_none_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_none_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Pub_event_none Enum_SS_eCAL_Publisher_Event = _swig_getpub_event_none()
 func _swig_getpub_event_connected() (_swig_ret Enum_SS_eCAL_Publisher_Event) {
 	var swig_r Enum_SS_eCAL_Publisher_Event
-	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_connected_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_connected_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Pub_event_connected Enum_SS_eCAL_Publisher_Event = _swig_getpub_event_connected()
 func _swig_getpub_event_disconnected() (_swig_ret Enum_SS_eCAL_Publisher_Event) {
 	var swig_r Enum_SS_eCAL_Publisher_Event
-	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_disconnected_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_disconnected_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Pub_event_disconnected Enum_SS_eCAL_Publisher_Event = _swig_getpub_event_disconnected()
 func _swig_getpub_event_dropped() (_swig_ret Enum_SS_eCAL_Publisher_Event) {
 	var swig_r Enum_SS_eCAL_Publisher_Event
-	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_dropped_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_pub_event_dropped_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -456,35 +456,35 @@ var Pub_event_dropped Enum_SS_eCAL_Publisher_Event = _swig_getpub_event_dropped(
 type Enum_SS_eCAL_Registration_Event int
 func _swig_getreg_event_none() (_swig_ret Enum_SS_eCAL_Registration_Event) {
 	var swig_r Enum_SS_eCAL_Registration_Event
-	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_none_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_none_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Reg_event_none Enum_SS_eCAL_Registration_Event = _swig_getreg_event_none()
 func _swig_getreg_event_publisher() (_swig_ret Enum_SS_eCAL_Registration_Event) {
 	var swig_r Enum_SS_eCAL_Registration_Event
-	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_publisher_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_publisher_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Reg_event_publisher Enum_SS_eCAL_Registration_Event = _swig_getreg_event_publisher()
 func _swig_getreg_event_subscriber() (_swig_ret Enum_SS_eCAL_Registration_Event) {
 	var swig_r Enum_SS_eCAL_Registration_Event
-	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_subscriber_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_subscriber_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Reg_event_subscriber Enum_SS_eCAL_Registration_Event = _swig_getreg_event_subscriber()
 func _swig_getreg_event_service() (_swig_ret Enum_SS_eCAL_Registration_Event) {
 	var swig_r Enum_SS_eCAL_Registration_Event
-	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_service_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_service_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Reg_event_service Enum_SS_eCAL_Registration_Event = _swig_getreg_event_service()
 func _swig_getreg_event_process() (_swig_ret Enum_SS_eCAL_Registration_Event) {
 	var swig_r Enum_SS_eCAL_Registration_Event
-	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_process_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eCAL_Registration_Event)(C._wrap_reg_event_process_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -501,77 +501,77 @@ func (p SwigcptrSReceiveCallbackDataC) SwigIsSReceiveCallbackDataC() {
 func (arg1 SwigcptrSReceiveCallbackDataC) SetBuf(arg2 uintptr) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReceiveCallbackDataC_buf_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+	C._wrap_SReceiveCallbackDataC_buf_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) GetBuf() (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_SReceiveCallbackDataC_buf_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (uintptr)(C._wrap_SReceiveCallbackDataC_buf_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) SetSize(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReceiveCallbackDataC_size_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_2(_swig_i_1))
+	C._wrap_SReceiveCallbackDataC_size_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_2(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) GetSize() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_size_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_size_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) SetId(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReceiveCallbackDataC_id_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_4(_swig_i_1))
+	C._wrap_SReceiveCallbackDataC_id_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_4(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) GetId() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_id_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_id_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) SetTime(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReceiveCallbackDataC_time_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_6(_swig_i_1))
+	C._wrap_SReceiveCallbackDataC_time_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_6(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) GetTime() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_time_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_time_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) SetClock(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReceiveCallbackDataC_clock_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_8(_swig_i_1))
+	C._wrap_SReceiveCallbackDataC_clock_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_8(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReceiveCallbackDataC) GetClock() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_clock_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SReceiveCallbackDataC_clock_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func NewSReceiveCallbackDataC() (_swig_ret SReceiveCallbackDataC) {
 	var swig_r SReceiveCallbackDataC
-	swig_r = (SReceiveCallbackDataC)(SwigcptrSReceiveCallbackDataC(C._wrap_new_SReceiveCallbackDataC_ecalc_c74bfc12973b0062()))
+	swig_r = (SReceiveCallbackDataC)(SwigcptrSReceiveCallbackDataC(C._wrap_new_SReceiveCallbackDataC_ecalc_5c8096034791d065()))
 	return swig_r
 }
 
 func DeleteSReceiveCallbackDataC(arg1 SReceiveCallbackDataC) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_SReceiveCallbackDataC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_SReceiveCallbackDataC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0))
 }
 
 type SReceiveCallbackDataC interface {
@@ -601,51 +601,51 @@ func (p SwigcptrSPubEventCallbackDataC) SwigIsSPubEventCallbackDataC() {
 func (arg1 SwigcptrSPubEventCallbackDataC) SetXtype(arg2 Enum_SS_eCAL_Publisher_Event) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SPubEventCallbackDataC_Xtype_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SPubEventCallbackDataC_Xtype_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSPubEventCallbackDataC) GetXtype() (_swig_ret Enum_SS_eCAL_Publisher_Event) {
 	var swig_r Enum_SS_eCAL_Publisher_Event
 	_swig_i_0 := arg1
-	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_SPubEventCallbackDataC_Xtype_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (Enum_SS_eCAL_Publisher_Event)(C._wrap_SPubEventCallbackDataC_Xtype_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSPubEventCallbackDataC) SetTime(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SPubEventCallbackDataC_time_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_10(_swig_i_1))
+	C._wrap_SPubEventCallbackDataC_time_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_10(_swig_i_1))
 }
 
 func (arg1 SwigcptrSPubEventCallbackDataC) GetTime() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SPubEventCallbackDataC_time_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SPubEventCallbackDataC_time_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSPubEventCallbackDataC) SetClock(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SPubEventCallbackDataC_clock_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_12(_swig_i_1))
+	C._wrap_SPubEventCallbackDataC_clock_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_12(_swig_i_1))
 }
 
 func (arg1 SwigcptrSPubEventCallbackDataC) GetClock() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SPubEventCallbackDataC_clock_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SPubEventCallbackDataC_clock_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func NewSPubEventCallbackDataC() (_swig_ret SPubEventCallbackDataC) {
 	var swig_r SPubEventCallbackDataC
-	swig_r = (SPubEventCallbackDataC)(SwigcptrSPubEventCallbackDataC(C._wrap_new_SPubEventCallbackDataC_ecalc_c74bfc12973b0062()))
+	swig_r = (SPubEventCallbackDataC)(SwigcptrSPubEventCallbackDataC(C._wrap_new_SPubEventCallbackDataC_ecalc_5c8096034791d065()))
 	return swig_r
 }
 
 func DeleteSPubEventCallbackDataC(arg1 SPubEventCallbackDataC) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_SPubEventCallbackDataC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_SPubEventCallbackDataC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0))
 }
 
 type SPubEventCallbackDataC interface {
@@ -671,51 +671,51 @@ func (p SwigcptrSSubEventCallbackDataC) SwigIsSSubEventCallbackDataC() {
 func (arg1 SwigcptrSSubEventCallbackDataC) SetXtype(arg2 Enum_SS_eCAL_Subscriber_Event) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SSubEventCallbackDataC_Xtype_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SSubEventCallbackDataC_Xtype_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSSubEventCallbackDataC) GetXtype() (_swig_ret Enum_SS_eCAL_Subscriber_Event) {
 	var swig_r Enum_SS_eCAL_Subscriber_Event
 	_swig_i_0 := arg1
-	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_SSubEventCallbackDataC_Xtype_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (Enum_SS_eCAL_Subscriber_Event)(C._wrap_SSubEventCallbackDataC_Xtype_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSSubEventCallbackDataC) SetTime(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SSubEventCallbackDataC_time_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_14(_swig_i_1))
+	C._wrap_SSubEventCallbackDataC_time_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_14(_swig_i_1))
 }
 
 func (arg1 SwigcptrSSubEventCallbackDataC) GetTime() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SSubEventCallbackDataC_time_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SSubEventCallbackDataC_time_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSSubEventCallbackDataC) SetClock(arg2 int64) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SSubEventCallbackDataC_clock_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_16(_swig_i_1))
+	C._wrap_SSubEventCallbackDataC_clock_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_16(_swig_i_1))
 }
 
 func (arg1 SwigcptrSSubEventCallbackDataC) GetClock() (_swig_ret int64) {
 	var swig_r int64
 	_swig_i_0 := arg1
-	swig_r = (int64)(C._wrap_SSubEventCallbackDataC_clock_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int64)(C._wrap_SSubEventCallbackDataC_clock_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func NewSSubEventCallbackDataC() (_swig_ret SSubEventCallbackDataC) {
 	var swig_r SSubEventCallbackDataC
-	swig_r = (SSubEventCallbackDataC)(SwigcptrSSubEventCallbackDataC(C._wrap_new_SSubEventCallbackDataC_ecalc_c74bfc12973b0062()))
+	swig_r = (SSubEventCallbackDataC)(SwigcptrSSubEventCallbackDataC(C._wrap_new_SSubEventCallbackDataC_ecalc_5c8096034791d065()))
 	return swig_r
 }
 
 func DeleteSSubEventCallbackDataC(arg1 SSubEventCallbackDataC) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_SSubEventCallbackDataC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_SSubEventCallbackDataC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0))
 }
 
 type SSubEventCallbackDataC interface {
@@ -731,7 +731,7 @@ type SSubEventCallbackDataC interface {
 
 func ECAL_GetVersionString() (_swig_ret string) {
 	var swig_r string
-	swig_r_p := C._wrap_eCAL_GetVersionString_ecalc_c74bfc12973b0062()
+	swig_r_p := C._wrap_eCAL_GetVersionString_ecalc_5c8096034791d065()
 	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
 	var swig_r_1 string
  swig_r_1 = swigCopyString(swig_r) 
@@ -740,7 +740,7 @@ func ECAL_GetVersionString() (_swig_ret string) {
 
 func ECAL_GetVersionDateString() (_swig_ret string) {
 	var swig_r string
-	swig_r_p := C._wrap_eCAL_GetVersionDateString_ecalc_c74bfc12973b0062()
+	swig_r_p := C._wrap_eCAL_GetVersionDateString_ecalc_5c8096034791d065()
 	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
 	var swig_r_1 string
  swig_r_1 = swigCopyString(swig_r) 
@@ -752,7 +752,7 @@ func ECAL_GetVersion(arg1 *int, arg2 *int, arg3 *int) (_swig_ret int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_GetVersion_ecalc_c74bfc12973b0062(C.swig_voidp(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_voidp(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_GetVersion_ecalc_5c8096034791d065(C.swig_voidp(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_voidp(_swig_i_2)))
 	return swig_r
 }
 
@@ -762,7 +762,7 @@ func ECAL_Initialize(arg1 int, arg2 *string, arg3 string, arg4 uint) (_swig_ret 
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (int)(C._wrap_eCAL_Initialize_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0), C.swig_voidp(_swig_i_1), *(*C.swig_type_20)(unsafe.Pointer(&_swig_i_2)), C.swig_intgo(_swig_i_3)))
+	swig_r = (int)(C._wrap_eCAL_Initialize_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0), C.swig_voidp(_swig_i_1), *(*C.swig_type_20)(unsafe.Pointer(&_swig_i_2)), C.swig_intgo(_swig_i_3)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg3
 	}
@@ -772,7 +772,7 @@ func ECAL_Initialize(arg1 int, arg2 *string, arg3 string, arg4 uint) (_swig_ret 
 func ECAL_SetUnitName(arg1 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_SetUnitName_ecalc_c74bfc12973b0062(*(*C.swig_type_21)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (int)(C._wrap_eCAL_SetUnitName_ecalc_5c8096034791d065(*(*C.swig_type_21)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -782,32 +782,32 @@ func ECAL_SetUnitName(arg1 string) (_swig_ret int) {
 func ECAL_Finalize(arg1 uint) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Finalize_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Finalize_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
 func ECAL_IsInitialized(arg1 uint) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_IsInitialized_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_IsInitialized_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
 func ECAL_Ok() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_eCAL_Ok_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_eCAL_Ok_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_FreeMem(arg1 uintptr) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_FreeMem_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0))
+	C._wrap_eCAL_FreeMem_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0))
 }
 
 func ECAL_Event_gOpenEvent(arg1 string) (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_eCAL_Event_gOpenEvent_ecalc_c74bfc12973b0062(*(*C.swig_type_22)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (uintptr)(C._wrap_eCAL_Event_gOpenEvent_ecalc_5c8096034791d065(*(*C.swig_type_22)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -817,14 +817,14 @@ func ECAL_Event_gOpenEvent(arg1 string) (_swig_ret uintptr) {
 func ECAL_Event_gCloseEvent(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Event_gCloseEvent_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Event_gCloseEvent_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func ECAL_Event_gSetEvent(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Event_gSetEvent_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Event_gSetEvent_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -832,14 +832,14 @@ func ECAL_Event_gWaitForEvent(arg1 uintptr, arg2 int64) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Event_gWaitForEvent_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_23(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Event_gWaitForEvent_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_23(_swig_i_1)))
 	return swig_r
 }
 
 func ECAL_Event_gEventIsValid(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Event_gEventIsValid_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Event_gEventIsValid_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -853,60 +853,60 @@ const ECAL_Init_RPC int = 0x40
 const ECAL_Init_ProcessReg int = 0x80
 func _swig_geteCAL_Init_All() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_eCAL_Init_All_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_eCAL_Init_All_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var ECAL_Init_All int = _swig_geteCAL_Init_All()
 func _swig_geteCAL_Init_Default() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_eCAL_Init_Default_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_eCAL_Init_Default_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var ECAL_Init_Default int = _swig_geteCAL_Init_Default()
 func ECAL_Logging_SetLogLevel(arg1 ECAL_Logging_eLogLevel) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Logging_SetLogLevel_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0))
+	C._wrap_eCAL_Logging_SetLogLevel_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0))
 }
 
 func ECAL_Logging_GetLogLevel() (_swig_ret ECAL_Logging_eLogLevel) {
 	var swig_r ECAL_Logging_eLogLevel
-	swig_r = (ECAL_Logging_eLogLevel)(C._wrap_eCAL_Logging_GetLogLevel_ecalc_c74bfc12973b0062())
+	swig_r = (ECAL_Logging_eLogLevel)(C._wrap_eCAL_Logging_GetLogLevel_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Logging_Log(arg1 string) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Logging_Log_ecalc_c74bfc12973b0062(*(*C.swig_type_24)(unsafe.Pointer(&_swig_i_0)))
+	C._wrap_eCAL_Logging_Log_ecalc_5c8096034791d065(*(*C.swig_type_24)(unsafe.Pointer(&_swig_i_0)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
 }
 
 func ECAL_Logging_StartCoreTimer() {
-	C._wrap_eCAL_Logging_StartCoreTimer_ecalc_c74bfc12973b0062()
+	C._wrap_eCAL_Logging_StartCoreTimer_ecalc_5c8096034791d065()
 }
 
 func ECAL_Logging_StopCoreTimer() {
-	C._wrap_eCAL_Logging_StopCoreTimer_ecalc_c74bfc12973b0062()
+	C._wrap_eCAL_Logging_StopCoreTimer_ecalc_5c8096034791d065()
 }
 
 func ECAL_Logging_SetCoreTime(arg1 float64) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Logging_SetCoreTime_ecalc_c74bfc12973b0062(C.double(_swig_i_0))
+	C._wrap_eCAL_Logging_SetCoreTime_ecalc_5c8096034791d065(C.double(_swig_i_0))
 }
 
 func ECAL_Logging_GetCoreTime() (_swig_ret float64) {
 	var swig_r float64
-	swig_r = (float64)(C._wrap_eCAL_Logging_GetCoreTime_ecalc_c74bfc12973b0062())
+	swig_r = (float64)(C._wrap_eCAL_Logging_GetCoreTime_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Monitoring_SetExclFilter(arg1 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Monitoring_SetExclFilter_ecalc_c74bfc12973b0062(*(*C.swig_type_25)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (int)(C._wrap_eCAL_Monitoring_SetExclFilter_ecalc_5c8096034791d065(*(*C.swig_type_25)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -916,7 +916,7 @@ func ECAL_Monitoring_SetExclFilter(arg1 string) (_swig_ret int) {
 func ECAL_Monitoring_SetInclFilter(arg1 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Monitoring_SetInclFilter_ecalc_c74bfc12973b0062(*(*C.swig_type_26)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (int)(C._wrap_eCAL_Monitoring_SetInclFilter_ecalc_5c8096034791d065(*(*C.swig_type_26)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -926,7 +926,7 @@ func ECAL_Monitoring_SetInclFilter(arg1 string) (_swig_ret int) {
 func ECAL_Monitoring_SetFilterState(arg1 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Monitoring_SetFilterState_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Monitoring_SetFilterState_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
@@ -934,7 +934,7 @@ func ECAL_Monitoring_GetMonitoring(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Monitoring_GetMonitoring_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Monitoring_GetMonitoring_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -942,7 +942,7 @@ func ECAL_Monitoring_GetLogging(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Monitoring_GetLogging_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Monitoring_GetLogging_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -950,7 +950,7 @@ func ECAL_Monitoring_PubMonitoring(arg1 int, arg2 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Monitoring_PubMonitoring_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0), *(*C.swig_type_27)(unsafe.Pointer(&_swig_i_1))))
+	swig_r = (int)(C._wrap_eCAL_Monitoring_PubMonitoring_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0), *(*C.swig_type_27)(unsafe.Pointer(&_swig_i_1))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -961,7 +961,7 @@ func ECAL_Monitoring_PubLogging(arg1 int, arg2 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Monitoring_PubLogging_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0), *(*C.swig_type_28)(unsafe.Pointer(&_swig_i_1))))
+	swig_r = (int)(C._wrap_eCAL_Monitoring_PubLogging_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0), *(*C.swig_type_28)(unsafe.Pointer(&_swig_i_1))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -969,20 +969,20 @@ func ECAL_Monitoring_PubLogging(arg1 int, arg2 string) (_swig_ret int) {
 }
 
 func ECAL_Process_DumpConfig() {
-	C._wrap_eCAL_Process_DumpConfig_ecalc_c74bfc12973b0062()
+	C._wrap_eCAL_Process_DumpConfig_ecalc_5c8096034791d065()
 }
 
 func ECAL_Process_GetHostName(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Process_GetHostName_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Process_GetHostName_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
 func ECAL_Process_GetHostID() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_eCAL_Process_GetHostID_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_eCAL_Process_GetHostID_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -990,7 +990,7 @@ func ECAL_Process_GetUnitName(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Process_GetUnitName_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Process_GetUnitName_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -999,7 +999,7 @@ func ECAL_Process_GetTaskParameter(arg1 uintptr, arg2 int, arg3 string) (_swig_r
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Process_GetTaskParameter_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), *(*C.swig_type_29)(unsafe.Pointer(&_swig_i_2))))
+	swig_r = (int)(C._wrap_eCAL_Process_GetTaskParameter_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), *(*C.swig_type_29)(unsafe.Pointer(&_swig_i_2))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg3
 	}
@@ -1008,12 +1008,12 @@ func ECAL_Process_GetTaskParameter(arg1 uintptr, arg2 int, arg3 string) (_swig_r
 
 func ECAL_Process_SleepMS(arg1 int64) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Process_SleepMS_ecalc_c74bfc12973b0062(C.swig_type_30(_swig_i_0))
+	C._wrap_eCAL_Process_SleepMS_ecalc_5c8096034791d065(C.swig_type_30(_swig_i_0))
 }
 
 func ECAL_Process_GetProcessID() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_eCAL_Process_GetProcessID_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_eCAL_Process_GetProcessID_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -1021,7 +1021,7 @@ func ECAL_Process_GetProcessName(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Process_GetProcessName_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Process_GetProcessName_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -1029,55 +1029,55 @@ func ECAL_Process_GetProcessParameter(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Process_GetProcessParameter_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Process_GetProcessParameter_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
 func ECAL_Process_GetProcessCpuUsage() (_swig_ret float32) {
 	var swig_r float32
-	swig_r = (float32)(C._wrap_eCAL_Process_GetProcessCpuUsage_ecalc_c74bfc12973b0062())
+	swig_r = (float32)(C._wrap_eCAL_Process_GetProcessCpuUsage_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Process_GetProcessMemory() (_swig_ret uint64) {
 	var swig_r uint64
-	swig_r = (uint64)(C._wrap_eCAL_Process_GetProcessMemory_ecalc_c74bfc12973b0062())
+	swig_r = (uint64)(C._wrap_eCAL_Process_GetProcessMemory_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Process_GetSClock() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Process_GetSClock_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Process_GetSClock_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Process_GetSBytes() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Process_GetSBytes_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Process_GetSBytes_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Process_GetWClock() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Process_GetWClock_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Process_GetWClock_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Process_GetWBytes() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Process_GetWBytes_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Process_GetWBytes_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Process_GetRClock() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Process_GetRClock_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Process_GetRClock_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Process_GetRBytes() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Process_GetRBytes_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Process_GetRBytes_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -1085,7 +1085,7 @@ func ECAL_Process_SetState(arg1 ECAL_Process_eSeverity, arg2 ECAL_Process_eSever
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	C._wrap_eCAL_Process_SetState_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0), C.swig_intgo(_swig_i_1), *(*C.swig_type_38)(unsafe.Pointer(&_swig_i_2)))
+	C._wrap_eCAL_Process_SetState_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0), C.swig_intgo(_swig_i_1), *(*C.swig_type_38)(unsafe.Pointer(&_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg3
 	}
@@ -1099,7 +1099,7 @@ func ECAL_Process_StartProcess(arg1 string, arg2 string, arg3 string, arg4 int, 
 	_swig_i_3 := arg4
 	_swig_i_4 := arg5
 	_swig_i_5 := arg6
-	swig_r = (int)(C._wrap_eCAL_Process_StartProcess_ecalc_c74bfc12973b0062(*(*C.swig_type_39)(unsafe.Pointer(&_swig_i_0)), *(*C.swig_type_40)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_41)(unsafe.Pointer(&_swig_i_2)), C.swig_intgo(_swig_i_3), C.swig_intgo(_swig_i_4), C.swig_intgo(_swig_i_5)))
+	swig_r = (int)(C._wrap_eCAL_Process_StartProcess_ecalc_5c8096034791d065(*(*C.swig_type_39)(unsafe.Pointer(&_swig_i_0)), *(*C.swig_type_40)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_41)(unsafe.Pointer(&_swig_i_2)), C.swig_intgo(_swig_i_3), C.swig_intgo(_swig_i_4), C.swig_intgo(_swig_i_5)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -1115,7 +1115,7 @@ func ECAL_Process_StartProcess(arg1 string, arg2 string, arg3 string, arg4 int, 
 func ECAL_Process_StopProcessName(arg1 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Process_StopProcessName_ecalc_c74bfc12973b0062(*(*C.swig_type_42)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (int)(C._wrap_eCAL_Process_StopProcessName_ecalc_5c8096034791d065(*(*C.swig_type_42)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -1125,13 +1125,13 @@ func ECAL_Process_StopProcessName(arg1 string) (_swig_ret int) {
 func ECAL_Process_StopProcessID(arg1 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Process_StopProcessID_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Process_StopProcessID_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
 func ECAL_Pub_New() (_swig_ret uintptr) {
 	var swig_r uintptr
-	swig_r = (uintptr)(C._wrap_eCAL_Pub_New_ecalc_c74bfc12973b0062())
+	swig_r = (uintptr)(C._wrap_eCAL_Pub_New_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -1142,7 +1142,7 @@ func ECAL_Pub_Create(arg1 uintptr, arg2 string, arg3 string, arg4 string, arg5 i
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
 	_swig_i_4 := arg5
-	swig_r = (int)(C._wrap_eCAL_Pub_Create_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_43)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_44)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_45)(unsafe.Pointer(&_swig_i_3)), C.swig_intgo(_swig_i_4)))
+	swig_r = (int)(C._wrap_eCAL_Pub_Create_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_43)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_44)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_45)(unsafe.Pointer(&_swig_i_3)), C.swig_intgo(_swig_i_4)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1158,7 +1158,7 @@ func ECAL_Pub_Create(arg1 uintptr, arg2 string, arg3 string, arg4 string, arg5 i
 func ECAL_Pub_Destroy(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Pub_Destroy_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Pub_Destroy_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1167,7 +1167,7 @@ func ECAL_Pub_SetDescription(arg1 uintptr, arg2 string, arg3 int) (_swig_ret int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Pub_SetDescription_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_46)(unsafe.Pointer(&_swig_i_1)), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Pub_SetDescription_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_46)(unsafe.Pointer(&_swig_i_1)), C.swig_intgo(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1178,7 +1178,7 @@ func ECAL_Pub_ShareType(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Pub_ShareType_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Pub_ShareType_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -1186,7 +1186,7 @@ func ECAL_Pub_ShareDescription(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Pub_ShareDescription_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Pub_ShareDescription_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -1194,7 +1194,7 @@ func ECAL_Pub_SetQOS(arg1 uintptr, arg2 SWriterQOSC) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2.Swigcptr()
-	swig_r = (int)(C._wrap_eCAL_Pub_SetQOS_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Pub_SetQOS_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
 	return swig_r
 }
 
@@ -1202,7 +1202,7 @@ func ECAL_Pub_GetQOS(arg1 uintptr, arg2 SWriterQOSC) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2.Swigcptr()
-	swig_r = (int)(C._wrap_eCAL_Pub_GetQOS_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Pub_GetQOS_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
 	return swig_r
 }
 
@@ -1211,7 +1211,7 @@ func ECAL_Pub_SetLayerMode(arg1 uintptr, arg2 Enum_SS_eTransportLayerC, arg3 Enu
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Pub_SetLayerMode_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Pub_SetLayerMode_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
@@ -1219,7 +1219,7 @@ func ECAL_Pub_SetMaxBandwidthUDP(arg1 uintptr, arg2 int64) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Pub_SetMaxBandwidthUDP_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_47(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Pub_SetMaxBandwidthUDP_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_47(_swig_i_1)))
 	return swig_r
 }
 
@@ -1227,14 +1227,14 @@ func ECAL_Pub_SetID(arg1 uintptr, arg2 int64) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Pub_SetID_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_48(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Pub_SetID_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_48(_swig_i_1)))
 	return swig_r
 }
 
 func ECAL_Pub_IsSubscribed(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Pub_IsSubscribed_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Pub_IsSubscribed_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1244,7 +1244,7 @@ func ECAL_Pub_Send(arg1 uintptr, arg2 uintptr, arg3 int, arg4 int64) (_swig_ret 
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (int)(C._wrap_eCAL_Pub_Send_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.swig_type_49(_swig_i_3)))
+	swig_r = (int)(C._wrap_eCAL_Pub_Send_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.swig_type_49(_swig_i_3)))
 	return swig_r
 }
 
@@ -1254,7 +1254,7 @@ func ECAL_Pub_AddEventCallbackC(arg1 uintptr, arg2 Enum_SS_eCAL_Publisher_Event,
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (int)(C._wrap_eCAL_Pub_AddEventCallbackC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_type_50(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	swig_r = (int)(C._wrap_eCAL_Pub_AddEventCallbackC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_type_50(_swig_i_2), C.uintptr_t(_swig_i_3)))
 	return swig_r
 }
 
@@ -1262,7 +1262,7 @@ func ECAL_Pub_RemEventCallback(arg1 uintptr, arg2 Enum_SS_eCAL_Publisher_Event) 
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Pub_RemEventCallback_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Pub_RemEventCallback_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -1271,21 +1271,21 @@ func ECAL_Pub_Dump(arg1 uintptr, arg2 uintptr, arg3 int) (_swig_ret int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Pub_Dump_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Pub_Dump_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
 type Enum_SS_eQOSPolicy_HistoryKindC int
 func _swig_getkeep_last_history_qos() (_swig_ret Enum_SS_eQOSPolicy_HistoryKindC) {
 	var swig_r Enum_SS_eQOSPolicy_HistoryKindC
-	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_keep_last_history_qos_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_keep_last_history_qos_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Keep_last_history_qos Enum_SS_eQOSPolicy_HistoryKindC = _swig_getkeep_last_history_qos()
 func _swig_getkeep_all_history_qos() (_swig_ret Enum_SS_eQOSPolicy_HistoryKindC) {
 	var swig_r Enum_SS_eQOSPolicy_HistoryKindC
-	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_keep_all_history_qos_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_keep_all_history_qos_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -1293,14 +1293,14 @@ var Keep_all_history_qos Enum_SS_eQOSPolicy_HistoryKindC = _swig_getkeep_all_his
 type Enum_SS_eQOSPolicy_ReliabilityC int
 func _swig_getbest_effort_reliability_qos() (_swig_ret Enum_SS_eQOSPolicy_ReliabilityC) {
 	var swig_r Enum_SS_eQOSPolicy_ReliabilityC
-	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_best_effort_reliability_qos_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_best_effort_reliability_qos_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Best_effort_reliability_qos Enum_SS_eQOSPolicy_ReliabilityC = _swig_getbest_effort_reliability_qos()
 func _swig_getreliable_reliability_qos() (_swig_ret Enum_SS_eQOSPolicy_ReliabilityC) {
 	var swig_r Enum_SS_eQOSPolicy_ReliabilityC
-	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_reliable_reliability_qos_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_reliable_reliability_qos_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -1317,51 +1317,51 @@ func (p SwigcptrSWriterQOSC) SwigIsSWriterQOSC() {
 func (arg1 SwigcptrSWriterQOSC) SetHistory_kind(arg2 Enum_SS_eQOSPolicy_HistoryKindC) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SWriterQOSC_history_kind_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SWriterQOSC_history_kind_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSWriterQOSC) GetHistory_kind() (_swig_ret Enum_SS_eQOSPolicy_HistoryKindC) {
 	var swig_r Enum_SS_eQOSPolicy_HistoryKindC
 	_swig_i_0 := arg1
-	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_SWriterQOSC_history_kind_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_SWriterQOSC_history_kind_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSWriterQOSC) SetHistory_kind_depth(arg2 int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SWriterQOSC_history_kind_depth_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SWriterQOSC_history_kind_depth_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSWriterQOSC) GetHistory_kind_depth() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_SWriterQOSC_history_kind_depth_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_SWriterQOSC_history_kind_depth_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSWriterQOSC) SetReliability(arg2 Enum_SS_eQOSPolicy_ReliabilityC) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SWriterQOSC_reliability_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SWriterQOSC_reliability_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSWriterQOSC) GetReliability() (_swig_ret Enum_SS_eQOSPolicy_ReliabilityC) {
 	var swig_r Enum_SS_eQOSPolicy_ReliabilityC
 	_swig_i_0 := arg1
-	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_SWriterQOSC_reliability_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_SWriterQOSC_reliability_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func NewSWriterQOSC() (_swig_ret SWriterQOSC) {
 	var swig_r SWriterQOSC
-	swig_r = (SWriterQOSC)(SwigcptrSWriterQOSC(C._wrap_new_SWriterQOSC_ecalc_c74bfc12973b0062()))
+	swig_r = (SWriterQOSC)(SwigcptrSWriterQOSC(C._wrap_new_SWriterQOSC_ecalc_5c8096034791d065()))
 	return swig_r
 }
 
 func DeleteSWriterQOSC(arg1 SWriterQOSC) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_SWriterQOSC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_SWriterQOSC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0))
 }
 
 type SWriterQOSC interface {
@@ -1387,51 +1387,51 @@ func (p SwigcptrSReaderQOSC) SwigIsSReaderQOSC() {
 func (arg1 SwigcptrSReaderQOSC) SetHistory_kind(arg2 Enum_SS_eQOSPolicy_HistoryKindC) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReaderQOSC_history_kind_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SReaderQOSC_history_kind_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReaderQOSC) GetHistory_kind() (_swig_ret Enum_SS_eQOSPolicy_HistoryKindC) {
 	var swig_r Enum_SS_eQOSPolicy_HistoryKindC
 	_swig_i_0 := arg1
-	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_SReaderQOSC_history_kind_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (Enum_SS_eQOSPolicy_HistoryKindC)(C._wrap_SReaderQOSC_history_kind_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSReaderQOSC) SetHistory_kind_depth(arg2 int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReaderQOSC_history_kind_depth_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SReaderQOSC_history_kind_depth_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReaderQOSC) GetHistory_kind_depth() (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_SReaderQOSC_history_kind_depth_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_SReaderQOSC_history_kind_depth_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func (arg1 SwigcptrSReaderQOSC) SetReliability(arg2 Enum_SS_eQOSPolicy_ReliabilityC) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	C._wrap_SReaderQOSC_reliability_set_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+	C._wrap_SReaderQOSC_reliability_set_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
 }
 
 func (arg1 SwigcptrSReaderQOSC) GetReliability() (_swig_ret Enum_SS_eQOSPolicy_ReliabilityC) {
 	var swig_r Enum_SS_eQOSPolicy_ReliabilityC
 	_swig_i_0 := arg1
-	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_SReaderQOSC_reliability_get_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (Enum_SS_eQOSPolicy_ReliabilityC)(C._wrap_SReaderQOSC_reliability_get_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func NewSReaderQOSC() (_swig_ret SReaderQOSC) {
 	var swig_r SReaderQOSC
-	swig_r = (SReaderQOSC)(SwigcptrSReaderQOSC(C._wrap_new_SReaderQOSC_ecalc_c74bfc12973b0062()))
+	swig_r = (SReaderQOSC)(SwigcptrSReaderQOSC(C._wrap_new_SReaderQOSC_ecalc_5c8096034791d065()))
 	return swig_r
 }
 
 func DeleteSReaderQOSC(arg1 SReaderQOSC) {
 	_swig_i_0 := arg1.Swigcptr()
-	C._wrap_delete_SReaderQOSC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_SReaderQOSC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0))
 }
 
 type SReaderQOSC interface {
@@ -1448,7 +1448,7 @@ type SReaderQOSC interface {
 func ECAL_Server_Create(arg1 string) (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_eCAL_Server_Create_ecalc_c74bfc12973b0062(*(*C.swig_type_51)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (uintptr)(C._wrap_eCAL_Server_Create_ecalc_5c8096034791d065(*(*C.swig_type_51)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -1458,7 +1458,7 @@ func ECAL_Server_Create(arg1 string) (_swig_ret uintptr) {
 func ECAL_Server_Destroy(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Server_Destroy_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Server_Destroy_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1470,7 +1470,7 @@ func ECAL_Server_AddMethodCallbackC(arg1 uintptr, arg2 string, arg3 string, arg4
 	_swig_i_3 := arg4
 	_swig_i_4 := arg5.Swigcptr()
 	_swig_i_5 := arg6
-	swig_r = (int)(C._wrap_eCAL_Server_AddMethodCallbackC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_52)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_53)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_54)(unsafe.Pointer(&_swig_i_3)), C.uintptr_t(_swig_i_4), C.uintptr_t(_swig_i_5)))
+	swig_r = (int)(C._wrap_eCAL_Server_AddMethodCallbackC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_52)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_53)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_54)(unsafe.Pointer(&_swig_i_3)), C.uintptr_t(_swig_i_4), C.uintptr_t(_swig_i_5)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1487,7 +1487,7 @@ func ECAL_Server_RemMethodCallbackC(arg1 uintptr, arg2 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Server_RemMethodCallbackC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_55)(unsafe.Pointer(&_swig_i_1))))
+	swig_r = (int)(C._wrap_eCAL_Server_RemMethodCallbackC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_55)(unsafe.Pointer(&_swig_i_1))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1499,14 +1499,14 @@ func ECAL_Server_GetServiceName(arg1 uintptr, arg2 uintptr, arg3 int) (_swig_ret
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Server_GetServiceName_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Server_GetServiceName_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
 func ECAL_Client_Create(arg1 string) (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_eCAL_Client_Create_ecalc_c74bfc12973b0062(*(*C.swig_type_56)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (uintptr)(C._wrap_eCAL_Client_Create_ecalc_5c8096034791d065(*(*C.swig_type_56)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -1516,7 +1516,7 @@ func ECAL_Client_Create(arg1 string) (_swig_ret uintptr) {
 func ECAL_Client_Destroy(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Client_Destroy_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Client_Destroy_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1524,7 +1524,7 @@ func ECAL_Client_SetHostName(arg1 uintptr, arg2 string) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Client_SetHostName_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_57)(unsafe.Pointer(&_swig_i_1))))
+	swig_r = (int)(C._wrap_eCAL_Client_SetHostName_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_57)(unsafe.Pointer(&_swig_i_1))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1537,7 +1537,7 @@ func ECAL_Client_Call(arg1 uintptr, arg2 string, arg3 string, arg4 int) (_swig_r
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (int)(C._wrap_eCAL_Client_Call_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_58)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_59)(unsafe.Pointer(&_swig_i_2)), C.swig_intgo(_swig_i_3)))
+	swig_r = (int)(C._wrap_eCAL_Client_Call_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_58)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_59)(unsafe.Pointer(&_swig_i_2)), C.swig_intgo(_swig_i_3)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1557,7 +1557,7 @@ func ECAL_Client_Call_Wait(arg1 uintptr, arg2 string, arg3 string, arg4 string, 
 	_swig_i_5 := arg6.Swigcptr()
 	_swig_i_6 := arg7
 	_swig_i_7 := arg8
-	swig_r = (int)(C._wrap_eCAL_Client_Call_Wait_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_60)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_61)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_62)(unsafe.Pointer(&_swig_i_3)), C.swig_intgo(_swig_i_4), C.uintptr_t(_swig_i_5), C.uintptr_t(_swig_i_6), C.swig_intgo(_swig_i_7)))
+	swig_r = (int)(C._wrap_eCAL_Client_Call_Wait_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_60)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_61)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_62)(unsafe.Pointer(&_swig_i_3)), C.swig_intgo(_swig_i_4), C.uintptr_t(_swig_i_5), C.uintptr_t(_swig_i_6), C.swig_intgo(_swig_i_7)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1575,20 +1575,20 @@ func ECAL_Client_AddResponseCallbackC(arg1 uintptr, arg2 ResponseCallbackCT, arg
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2.Swigcptr()
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Client_AddResponseCallbackC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Client_AddResponseCallbackC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
 	return swig_r
 }
 
 func ECAL_Client_RemResponseCallback(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Client_RemResponseCallback_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Client_RemResponseCallback_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 func ECAL_Sub_New() (_swig_ret uintptr) {
 	var swig_r uintptr
-	swig_r = (uintptr)(C._wrap_eCAL_Sub_New_ecalc_c74bfc12973b0062())
+	swig_r = (uintptr)(C._wrap_eCAL_Sub_New_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -1599,7 +1599,7 @@ func ECAL_Sub_Create(arg1 uintptr, arg2 string, arg3 string, arg4 string, arg5 i
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
 	_swig_i_4 := arg5
-	swig_r = (int)(C._wrap_eCAL_Sub_Create_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), *(*C.swig_type_63)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_64)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_65)(unsafe.Pointer(&_swig_i_3)), C.swig_intgo(_swig_i_4)))
+	swig_r = (int)(C._wrap_eCAL_Sub_Create_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), *(*C.swig_type_63)(unsafe.Pointer(&_swig_i_1)), *(*C.swig_type_64)(unsafe.Pointer(&_swig_i_2)), *(*C.swig_type_65)(unsafe.Pointer(&_swig_i_3)), C.swig_intgo(_swig_i_4)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -1615,7 +1615,7 @@ func ECAL_Sub_Create(arg1 uintptr, arg2 string, arg3 string, arg4 string, arg5 i
 func ECAL_Sub_Destroy(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Sub_Destroy_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Sub_Destroy_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1623,7 +1623,7 @@ func ECAL_Sub_SetQOS(arg1 uintptr, arg2 SReaderQOSC) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2.Swigcptr()
-	swig_r = (int)(C._wrap_eCAL_Sub_SetQOS_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Sub_SetQOS_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
 	return swig_r
 }
 
@@ -1631,7 +1631,7 @@ func ECAL_Sub_GetQOS(arg1 uintptr, arg2 SReaderQOSC) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2.Swigcptr()
-	swig_r = (int)(C._wrap_eCAL_Sub_GetQOS_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Sub_GetQOS_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
 	return swig_r
 }
 
@@ -1640,7 +1640,7 @@ func ECAL_Sub_SetID(arg1 uintptr, arg2 *int64, arg3 int) (_swig_ret int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Sub_SetID_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Sub_SetID_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
@@ -1651,7 +1651,7 @@ func ECAL_Sub_Receive(arg1 uintptr, arg2 uintptr, arg3 int, arg4 *int64, arg5 in
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
 	_swig_i_4 := arg5
-	swig_r = (int)(C._wrap_eCAL_Sub_Receive_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.swig_voidp(_swig_i_3), C.swig_intgo(_swig_i_4)))
+	swig_r = (int)(C._wrap_eCAL_Sub_Receive_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.swig_voidp(_swig_i_3), C.swig_intgo(_swig_i_4)))
 	return swig_r
 }
 
@@ -1662,7 +1662,7 @@ func ECAL_Sub_Receive_ToBuffer(arg1 uintptr, arg2 uintptr, arg3 int, arg4 *int64
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
 	_swig_i_4 := arg5
-	swig_r = (int)(C._wrap_eCAL_Sub_Receive_ToBuffer_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.swig_voidp(_swig_i_3), C.swig_intgo(_swig_i_4)))
+	swig_r = (int)(C._wrap_eCAL_Sub_Receive_ToBuffer_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.swig_voidp(_swig_i_3), C.swig_intgo(_swig_i_4)))
 	return swig_r
 }
 
@@ -1672,7 +1672,7 @@ func ECAL_Sub_Receive_Alloc(arg1 uintptr, arg2 *uintptr, arg3 *int64, arg4 int) 
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (int)(C._wrap_eCAL_Sub_Receive_Alloc_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_voidp(_swig_i_2), C.swig_intgo(_swig_i_3)))
+	swig_r = (int)(C._wrap_eCAL_Sub_Receive_Alloc_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_voidp(_swig_i_2), C.swig_intgo(_swig_i_3)))
 	return swig_r
 }
 
@@ -1681,14 +1681,14 @@ func ECAL_Sub_AddReceiveCallbackC(arg1 uintptr, arg2 _swig_fnptr, arg3 uintptr) 
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Sub_AddReceiveCallbackC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_66(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Sub_AddReceiveCallbackC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_66(_swig_i_1), C.uintptr_t(_swig_i_2)))
 	return swig_r
 }
 
 func ECAL_Sub_RemReceiveCallback(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Sub_RemReceiveCallback_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Sub_RemReceiveCallback_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1698,7 +1698,7 @@ func ECAL_Sub_AddEventCallbackC(arg1 uintptr, arg2 Enum_SS_eCAL_Subscriber_Event
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
-	swig_r = (int)(C._wrap_eCAL_Sub_AddEventCallbackC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_type_67(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	swig_r = (int)(C._wrap_eCAL_Sub_AddEventCallbackC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_type_67(_swig_i_2), C.uintptr_t(_swig_i_3)))
 	return swig_r
 }
 
@@ -1706,7 +1706,7 @@ func ECAL_Sub_RemEventCallback(arg1 uintptr, arg2 Enum_SS_eCAL_Subscriber_Event)
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Sub_RemEventCallback_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Sub_RemEventCallback_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -1715,7 +1715,7 @@ func ECAL_Sub_GetDescription(arg1 uintptr, arg2 uintptr, arg3 int) (_swig_ret in
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Sub_GetDescription_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Sub_GetDescription_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
@@ -1723,7 +1723,7 @@ func ECAL_Sub_SetTimeout(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Sub_SetTimeout_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Sub_SetTimeout_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
@@ -1732,14 +1732,14 @@ func ECAL_Sub_Dump(arg1 uintptr, arg2 uintptr, arg3 int) (_swig_ret int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Sub_Dump_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Sub_Dump_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
 func ECAL_Proto_Dyn_JSON_Sub_Create(arg1 string) (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_Create_ecalc_c74bfc12973b0062(*(*C.swig_type_68)(unsafe.Pointer(&_swig_i_0))))
+	swig_r = (uintptr)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_Create_ecalc_5c8096034791d065(*(*C.swig_type_68)(unsafe.Pointer(&_swig_i_0))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -1749,7 +1749,7 @@ func ECAL_Proto_Dyn_JSON_Sub_Create(arg1 string) (_swig_ret uintptr) {
 func ECAL_Proto_Dyn_JSON_Sub_Destroy(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_Destroy_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_Destroy_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1758,14 +1758,14 @@ func ECAL_Proto_Dyn_JSON_Sub_AddReceiveCallbackC(arg1 uintptr, arg2 _swig_fnptr,
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_AddReceiveCallbackC_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_type_69(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_AddReceiveCallbackC_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_type_69(_swig_i_1), C.uintptr_t(_swig_i_2)))
 	return swig_r
 }
 
 func ECAL_Proto_Dyn_JSON_Sub_RemReceiveCallback(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_RemReceiveCallback_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Proto_Dyn_JSON_Sub_RemReceiveCallback_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1773,44 +1773,44 @@ func ECAL_Time_GetName(arg1 uintptr, arg2 int) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
-	swig_r = (int)(C._wrap_eCAL_Time_GetName_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
+	swig_r = (int)(C._wrap_eCAL_Time_GetName_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1)))
 	return swig_r
 }
 
 func ECAL_Time_GetMicroSeconds() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Time_GetMicroSeconds_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Time_GetMicroSeconds_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Time_GetNanoSeconds() (_swig_ret int64) {
 	var swig_r int64
-	swig_r = (int64)(C._wrap_eCAL_Time_GetNanoSeconds_ecalc_c74bfc12973b0062())
+	swig_r = (int64)(C._wrap_eCAL_Time_GetNanoSeconds_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Time_SetNanoSeconds(arg1 int64) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Time_SetNanoSeconds_ecalc_c74bfc12973b0062(C.swig_type_72(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Time_SetNanoSeconds_ecalc_5c8096034791d065(C.swig_type_72(_swig_i_0)))
 	return swig_r
 }
 
 func ECAL_Time_IsTimeSynchronized() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_eCAL_Time_IsTimeSynchronized_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_eCAL_Time_IsTimeSynchronized_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Time_IsTimeMaster() (_swig_ret int) {
 	var swig_r int
-	swig_r = (int)(C._wrap_eCAL_Time_IsTimeMaster_ecalc_c74bfc12973b0062())
+	swig_r = (int)(C._wrap_eCAL_Time_IsTimeMaster_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Time_SleepForNanoseconds(arg1 int64) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Time_SleepForNanoseconds_ecalc_c74bfc12973b0062(C.swig_type_73(_swig_i_0))
+	C._wrap_eCAL_Time_SleepForNanoseconds_ecalc_5c8096034791d065(C.swig_type_73(_swig_i_0))
 }
 
 func ECAL_Time_GetStatus(arg1 *int, arg2 *string, arg3 int) (_swig_ret int) {
@@ -1818,20 +1818,20 @@ func ECAL_Time_GetStatus(arg1 *int, arg2 *string, arg3 int) (_swig_ret int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Time_GetStatus_ecalc_c74bfc12973b0062(C.swig_voidp(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Time_GetStatus_ecalc_5c8096034791d065(C.swig_voidp(_swig_i_0), C.swig_voidp(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
 func ECAL_Timer_Create() (_swig_ret uintptr) {
 	var swig_r uintptr
-	swig_r = (uintptr)(C._wrap_eCAL_Timer_Create_ecalc_c74bfc12973b0062())
+	swig_r = (uintptr)(C._wrap_eCAL_Timer_Create_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 func ECAL_Timer_Destroy(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Timer_Destroy_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Timer_Destroy_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
@@ -1842,49 +1842,49 @@ func ECAL_Timer_Start(arg1 uintptr, arg2 int, arg3 _swig_fnptr, arg4 int, arg5 u
 	_swig_i_2 := arg3
 	_swig_i_3 := arg4
 	_swig_i_4 := arg5
-	swig_r = (int)(C._wrap_eCAL_Timer_Start_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_type_74(_swig_i_2), C.swig_intgo(_swig_i_3), C.uintptr_t(_swig_i_4)))
+	swig_r = (int)(C._wrap_eCAL_Timer_Start_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_type_74(_swig_i_2), C.swig_intgo(_swig_i_3), C.uintptr_t(_swig_i_4)))
 	return swig_r
 }
 
 func ECAL_Timer_Stop(arg1 uintptr) (_swig_ret int) {
 	var swig_r int
 	_swig_i_0 := arg1
-	swig_r = (int)(C._wrap_eCAL_Timer_Stop_ecalc_c74bfc12973b0062(C.uintptr_t(_swig_i_0)))
+	swig_r = (int)(C._wrap_eCAL_Timer_Stop_ecalc_5c8096034791d065(C.uintptr_t(_swig_i_0)))
 	return swig_r
 }
 
 type Enum_SS_eTransportLayerC int
 func _swig_gettlayer_none() (_swig_ret Enum_SS_eTransportLayerC) {
 	var swig_r Enum_SS_eTransportLayerC
-	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_none_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_none_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Tlayer_none Enum_SS_eTransportLayerC = _swig_gettlayer_none()
 func _swig_gettlayer_udp_mc() (_swig_ret Enum_SS_eTransportLayerC) {
 	var swig_r Enum_SS_eTransportLayerC
-	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_udp_mc_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_udp_mc_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Tlayer_udp_mc Enum_SS_eTransportLayerC = _swig_gettlayer_udp_mc()
 func _swig_gettlayer_shm() (_swig_ret Enum_SS_eTransportLayerC) {
 	var swig_r Enum_SS_eTransportLayerC
-	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_shm_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_shm_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Tlayer_shm Enum_SS_eTransportLayerC = _swig_gettlayer_shm()
 func _swig_gettlayer_inproc() (_swig_ret Enum_SS_eTransportLayerC) {
 	var swig_r Enum_SS_eTransportLayerC
-	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_inproc_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_inproc_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Tlayer_inproc Enum_SS_eTransportLayerC = _swig_gettlayer_inproc()
 func _swig_gettlayer_all() (_swig_ret Enum_SS_eTransportLayerC) {
 	var swig_r Enum_SS_eTransportLayerC
-	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_all_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eTransportLayerC)(C._wrap_tlayer_all_ecalc_5c8096034791d065())
 	return swig_r
 }
 
@@ -1892,35 +1892,35 @@ var Tlayer_all Enum_SS_eTransportLayerC = _swig_gettlayer_all()
 type Enum_SS_eSendModeC int
 func _swig_getsmode_none() (_swig_ret Enum_SS_eSendModeC) {
 	var swig_r Enum_SS_eSendModeC
-	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_none_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_none_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Smode_none Enum_SS_eSendModeC = _swig_getsmode_none()
 func _swig_getsmode_off() (_swig_ret Enum_SS_eSendModeC) {
 	var swig_r Enum_SS_eSendModeC
-	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_off_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_off_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Smode_off Enum_SS_eSendModeC = _swig_getsmode_off()
 func _swig_getsmode_on() (_swig_ret Enum_SS_eSendModeC) {
 	var swig_r Enum_SS_eSendModeC
-	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_on_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_on_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Smode_on Enum_SS_eSendModeC = _swig_getsmode_on()
 func _swig_getsmode_auto() (_swig_ret Enum_SS_eSendModeC) {
 	var swig_r Enum_SS_eSendModeC
-	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_auto_ecalc_c74bfc12973b0062())
+	swig_r = (Enum_SS_eSendModeC)(C._wrap_smode_auto_ecalc_5c8096034791d065())
 	return swig_r
 }
 
 var Smode_auto Enum_SS_eSendModeC = _swig_getsmode_auto()
 func ECAL_Util_ShutdownUnitName(arg1 string) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Util_ShutdownUnitName_ecalc_c74bfc12973b0062(*(*C.swig_type_75)(unsafe.Pointer(&_swig_i_0)))
+	C._wrap_eCAL_Util_ShutdownUnitName_ecalc_5c8096034791d065(*(*C.swig_type_75)(unsafe.Pointer(&_swig_i_0)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -1928,20 +1928,20 @@ func ECAL_Util_ShutdownUnitName(arg1 string) {
 
 func ECAL_Util_ShutdownProcessID(arg1 int) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Util_ShutdownProcessID_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0))
+	C._wrap_eCAL_Util_ShutdownProcessID_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0))
 }
 
 func ECAL_Util_ShutdownProcesses() {
-	C._wrap_eCAL_Util_ShutdownProcesses_ecalc_c74bfc12973b0062()
+	C._wrap_eCAL_Util_ShutdownProcesses_ecalc_5c8096034791d065()
 }
 
 func ECAL_Util_ShutdownCore() {
-	C._wrap_eCAL_Util_ShutdownCore_ecalc_c74bfc12973b0062()
+	C._wrap_eCAL_Util_ShutdownCore_ecalc_5c8096034791d065()
 }
 
 func ECAL_Util_EnableLoopback(arg1 int) {
 	_swig_i_0 := arg1
-	C._wrap_eCAL_Util_EnableLoopback_ecalc_c74bfc12973b0062(C.swig_intgo(_swig_i_0))
+	C._wrap_eCAL_Util_EnableLoopback_ecalc_5c8096034791d065(C.swig_intgo(_swig_i_0))
 }
 
 func ECAL_Util_GetTypeName(arg1 string, arg2 uintptr, arg3 int) (_swig_ret int) {
@@ -1949,7 +1949,7 @@ func ECAL_Util_GetTypeName(arg1 string, arg2 uintptr, arg3 int) (_swig_ret int) 
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Util_GetTypeName_ecalc_c74bfc12973b0062(*(*C.swig_type_76)(unsafe.Pointer(&_swig_i_0)), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Util_GetTypeName_ecalc_5c8096034791d065(*(*C.swig_type_76)(unsafe.Pointer(&_swig_i_0)), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
@@ -1961,7 +1961,7 @@ func ECAL_Util_GetDescription(arg1 string, arg2 uintptr, arg3 int) (_swig_ret in
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_eCAL_Util_GetDescription_ecalc_c74bfc12973b0062(*(*C.swig_type_77)(unsafe.Pointer(&_swig_i_0)), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_eCAL_Util_GetDescription_ecalc_5c8096034791d065(*(*C.swig_type_77)(unsafe.Pointer(&_swig_i_0)), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg1
 	}
