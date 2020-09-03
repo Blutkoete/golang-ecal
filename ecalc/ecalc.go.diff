@@ -1,0 +1,13 @@
+diff --git a/ecalc/ecalc.go b/ecalc/ecalc.go
+index 5178492..57a81f6 100644
+--- a/ecalc/ecalc.go
++++ b/ecalc/ecalc.go
+@@ -13,8 +13,6 @@
+ package ecalc
+ 
+ /*
+-#cgo CFLAGS: -I .
+-#cgo LDFLAGS: -lecal_core_c
+ #define intgo swig_intgo
+ typedef void *swig_voidp;
+ 
