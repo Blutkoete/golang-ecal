@@ -1,3 +1,6 @@
+# New, better version that is actually maintained
+I created this years ago and never updated it. There is a new, better and maintained version by [DownerCase](https://github.com/DownerCase) available [here](https://github.com/DownerCase/ecal-go). 
+
 # golang-ecal
 A [high-level interface](https://github.com/Blutkoete/golang-ecal/tree/master/ecal) from [GO](https://golang.org/) to [eCAL](https://github.com/continental/ecal) based on a [low-level interface](https://github.com/Blutkoete/golang-ecal/tree/master/ecalc) generated via [SWIG](http://swig.org/).
 
